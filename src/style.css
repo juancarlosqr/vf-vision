@@ -1,0 +1,9 @@
+body {
+  background-color: #fff;
+  margin: 0;
+}
+#website {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+}

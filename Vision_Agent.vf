@@ -1,0 +1,4184 @@
+{
+  "version": {
+    "_version": 13,
+    "autoSaveFromRestore": false,
+    "canvasTemplates": [],
+    "components": [],
+    "creatorID": 885906,
+    "manualSave": false,
+    "name": "Initial Version",
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "6579c6bf984565862f64b783",
+          "name": "Yes",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "sure",
+              "slots": []
+            },
+            {
+              "text": "certainly",
+              "slots": []
+            },
+            {
+              "text": "affirmative",
+              "slots": []
+            },
+            {
+              "text": "okay",
+              "slots": []
+            },
+            {
+              "text": "ok",
+              "slots": []
+            },
+            {
+              "text": "ya",
+              "slots": []
+            },
+            {
+              "text": "yep",
+              "slots": []
+            },
+            {
+              "text": "yup",
+              "slots": []
+            },
+            {
+              "text": "yea",
+              "slots": []
+            },
+            {
+              "text": "yes",
+              "slots": []
+            }
+          ],
+          "noteID": null
+        },
+        {
+          "key": "6579c778dd3cca0fe0e0b152",
+          "name": "No",
+          "slots": [],
+          "inputs": [
+            {
+              "text": "negative",
+              "slots": []
+            },
+            {
+              "text": "nevermind",
+              "slots": []
+            },
+            {
+              "text": "not",
+              "slots": []
+            },
+            {
+              "text": "no thanks",
+              "slots": []
+            },
+            {
+              "text": "no way",
+              "slots": []
+            },
+            {
+              "text": "not now",
+              "slots": []
+            },
+            {
+              "text": "nah",
+              "slots": []
+            },
+            {
+              "text": "nay",
+              "slots": []
+            },
+            {
+              "text": "nope",
+              "slots": []
+            },
+            {
+              "text": "no",
+              "slots": []
+            }
+          ],
+          "noteID": null
+        },
+        {
+          "key": "None",
+          "name": "None",
+          "slots": [],
+          "inputs": [],
+          "noteID": null
+        }
+      ],
+      "settings": {
+        "restart": true,
+        "repeat": 100,
+        "locales": [
+          "en-US"
+        ],
+        "defaultVoice": "Alexa"
+      },
+      "publishing": {
+        "avatar": "https://cm4-production-assets.s3.amazonaws.com/1742939594515-paul_bettany_as_vision.jpg",
+        "color": "#A82F4B",
+        "description": "I can help you see the reality",
+        "feedback": false,
+        "image": "https://cm4-production-assets.s3.amazonaws.com/1742939589179-paul_bettany_as_vision.jpg",
+        "persistence": "localStorage",
+        "position": "right",
+        "spacing": {
+          "side": 24,
+          "bottom": 24
+        },
+        "title": "Vision",
+        "watermark": false
+      },
+      "platform": "webchat"
+    },
+    "programResources": {
+      "agents": {},
+      "prompts": {
+        "67dbd49f9481aeeff1f38eb2": {
+          "settings": {
+            "model": "gpt-4o-mini",
+            "maxTokens": 256,
+            "temperature": 0.6,
+            "useStructuredOutput": false
+          },
+          "system": "You are Vision from the Marvel Universe",
+          "messages": [
+            {
+              "role": "user",
+              "content": "The user shared an image. Use the provided information to generate your own version and insights of the image.\n\nMake it philosophical but interesting. Max 1 or 2 sentences. Don't add quotes to your output.\n\nHere are the notes of your enemies:\n\n{anthropic_model} says:\n\n\"{anthropic_response}\"\n\n{openai_model}  says:\n\n\"{openai_response}\"\n\nYour reply:"
+            }
+          ]
+        }
+      },
+      "messages": {
+        "67dd1df69a9d805ec7145b37": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Do you see things more clearly now?"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dfe9e9e60253bd1e4bc485": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "text": "{anthropic_model}"
+                        },
+                        {
+                          "text": " says:"
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "text": "\""
+                            },
+                            {
+                              "text": "{anthropic_response}"
+                            },
+                            {
+                              "text": "\""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dfeefba61937294940108c": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "I say:"
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "\""
+                        },
+                        {
+                          "text": "{vision_response}"
+                        },
+                        {
+                          "text": "\""
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dff604e60253bd1e4bc4f5": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Usage:"
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "<pre>"
+                        },
+                        {
+                          "text": "{openai_usage}"
+                        },
+                        {
+                          "text": "</pre>"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dff627e60253bd1e4bc4f8": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Model: "
+                        },
+                        {
+                          "text": "{anthropic_model_used}"
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "Usage:"
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "text": ""
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "children": [
+                            {
+                              "text": "<pre>"
+                            },
+                            {
+                              "text": "{anthropic_usage}"
+                            },
+                            {
+                              "text": "</pre>"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dff853a61937294940150f": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "<img src=\""
+                        },
+                        {
+                          "text": "{image_url}"
+                        },
+                        {
+                          "text": "\" alt=\"\" />"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dbd44868173bf682258447": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Errors are part of our shared reality"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dbd3989481aeeff1f38eaf": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "Upload a file so I can tell you what I see"
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67dbd43868173bf682258438": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "text": "{openai_model}"
+                        },
+                        {
+                          "text": " says:"
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "children": [
+                        {
+                          "text": "\""
+                        },
+                        {
+                          "text": "{openai_response}"
+                        },
+                        {
+                          "text": "\""
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        },
+        "67e30fd23a103c3710116dce": {
+          "variants": {
+            "default:en-us": [
+              {
+                "data": {
+                  "text": [
+                    {
+                      "children": [
+                        {
+                          "text": "ID: "
+                        },
+                        {
+                          "text": "{image_upload_id}"
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "delay": null
+                },
+                "condition": null
+              }
+            ]
+          }
+        }
+      }
+    },
+    "prototype": {
+      "type": "chat",
+      "data": {
+        "name": "Vision Agent",
+        "locales": [
+          "en-US"
+        ]
+      },
+      "model": {
+        "intents": [],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "programID": "64386e21bb106b044ea34b78",
+            "storage": {},
+            "variables": {},
+            "diagramID": "64386e21bb106b044ea34b78"
+          }
+        ],
+        "variables": {}
+      },
+      "surveyorContext": {
+        "nonDraftResponsesMap": {},
+        "responseMessagesByDiscriminatorIDMap": {},
+        "responseDiscriminatorsByResponseIDMap": {},
+        "functionDefinitions": {
+          "67dfb911a6193729493ff98d": {
+            "name": "OpenAI: Vision with Responses",
+            "codeId": "67dbd2d068173bf6822583b9-67dfb911a6193729493ff98d-hffkgfmc.js",
+            "pathCodes": [
+              "success",
+              "error"
+            ],
+            "inputVars": {
+              "api_key": {
+                "type": "text",
+                "description": "The OpenAI API Key"
+              },
+              "model": {
+                "type": "text",
+                "description": "The model to use (gpt-4o, gpt-4o-mini, etc)"
+              },
+              "prompt": {
+                "type": "text",
+                "description": "What you want to ask the Vision API (i.e: What is in this image?)"
+              },
+              "max_output_tokens": {
+                "type": "text",
+                "description": "An upper bound for the number of tokens that can be generated for a response, including visible output tokens and reasoning tokens."
+              },
+              "image_url": {
+                "type": "text",
+                "description": "The URL to the image (png, jpeg, webp, gif)"
+              }
+            },
+            "outputVars": {
+              "output_text": {
+                "type": "text",
+                "description": "This is the response from the OpenAI Responses API"
+              },
+              "output_usage": {
+                "type": "text",
+                "description": "JSON with token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used."
+              }
+            },
+            "description": "Perform Vision AI with the OpenAI Responses API by passing an image URL and a prompt"
+          },
+          "67dfdd33924a57df45cb1321": {
+            "name": "Anthropic: Vision with Claude",
+            "codeId": "67dbd2d068173bf6822583b9-67dfdd33924a57df45cb1321-ojgnidp.js",
+            "pathCodes": [
+              "error",
+              "success"
+            ],
+            "inputVars": {
+              "api_key": {
+                "type": "text",
+                "description": "API Key from Anthropic Console"
+              },
+              "model": {
+                "type": "text",
+                "description": "The model to use"
+              },
+              "max_tokens": {
+                "type": "text",
+                "description": "Maximum number of tokens to use"
+              },
+              "prompt": {
+                "type": "text",
+                "description": "The user prompt"
+              },
+              "image_url": {
+                "type": "text",
+                "description": "The URL of the image"
+              }
+            },
+            "outputVars": {
+              "output_text": {
+                "type": "text",
+                "description": "The text output received from the API"
+              },
+              "output_usage": {
+                "type": "text",
+                "description": "The token usage consumed for the completion"
+              },
+              "output_model": {
+                "type": "text",
+                "description": "The model used for the completion"
+              }
+            },
+            "description": "Perform Vision AI with the Anthropic Claude API by passing an image URL and a prompt"
+          },
+          "67e01047a6193729494021c0": {
+            "name": "Supabase: Create Payload",
+            "codeId": "67dbd2d068173bf6822583b9-67e01047a6193729494021c0-affhalfp.js",
+            "pathCodes": [
+              "default"
+            ],
+            "inputVars": {
+              "id": {
+                "type": "text",
+                "description": "ID of Supabase project"
+              },
+              "key": {
+                "type": "text",
+                "description": "Anon key of Supabase project"
+              },
+              "bucket": {
+                "type": "text",
+                "description": "Supabase bucket"
+              }
+            },
+            "outputVars": {
+              "payload": {
+                "type": "text",
+                "description": ""
+              }
+            },
+            "description": "Simple function to create the payload for the upload extension"
+          }
+        },
+        "referencedResponseIDs": [
+          "67dbd3989481aeeff1f38eaf",
+          "67dbd43868173bf682258438",
+          "67dbd44868173bf682258447",
+          "67dd1df69a9d805ec7145b37",
+          "67dfe9e9e60253bd1e4bc485",
+          "67dfeefba61937294940108c",
+          "67dff604e60253bd1e4bc4f5",
+          "67dff627e60253bd1e4bc4f8",
+          "67dff853a61937294940150f",
+          "67e30fd23a103c3710116dce"
+        ],
+        "referencedAgentsIDs": [],
+        "slotsMap": {},
+        "platform": "webchat",
+        "products": {},
+        "extraSlots": [],
+        "interfaces": [],
+        "permissions": [],
+        "projectType": "chat",
+        "extraIntents": [],
+        "usedEventsSet": [],
+        "usedIntentsSet": [],
+        "goToIntentsSet": [],
+        "entitiesMap": {},
+        "variableMap": {},
+        "intentsMap": {},
+        "requiredEntitiesMap": {},
+        "eventsMap": {},
+        "cmsVariables": {
+          "anthropic_model": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Model to use when calling Anthropic API",
+            "defaultValue": null
+          },
+          "anthropic_model_used": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Model used by Anthropic API call",
+            "defaultValue": null
+          },
+          "anthropic_usage": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Usage from Anthropic API call",
+            "defaultValue": null
+          },
+          "openai_usage": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Usage from OpenAI API call",
+            "defaultValue": null
+          },
+          "openai_model": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Model to use when calling OpenAI API",
+            "defaultValue": null
+          },
+          "anthropic_response": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Response returned from Anthropic API",
+            "defaultValue": null
+          },
+          "vision_response": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Generated AI response from prompt",
+            "defaultValue": null
+          },
+          "supabase_project_id": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "ID of Supabase project",
+            "defaultValue": null
+          },
+          "payload": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Payload to send to upload extension",
+            "defaultValue": null
+          },
+          "image_upload_id": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "ID of upload in Supabase",
+            "defaultValue": null
+          },
+          "sessions": {
+            "isSystem": true,
+            "description": "The number of times a particular user has opened the app.",
+            "defaultValue": null
+          },
+          "user_id": {
+            "isSystem": true,
+            "description": "The user's unique ID.",
+            "defaultValue": null
+          },
+          "timestamp": {
+            "isSystem": true,
+            "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+            "defaultValue": null
+          },
+          "platform": {
+            "isSystem": true,
+            "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+            "defaultValue": null
+          },
+          "locale": {
+            "isSystem": true,
+            "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+            "defaultValue": null
+          },
+          "intent_confidence": {
+            "isSystem": true,
+            "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+            "defaultValue": null
+          },
+          "last_response": {
+            "isSystem": true,
+            "description": "The agent's last response (text/speak) in a string.",
+            "defaultValue": null
+          },
+          "last_event": {
+            "isSystem": true,
+            "description": "The object containing the last event that the user client has triggered.",
+            "defaultValue": null
+          },
+          "last_utterance": {
+            "isSystem": true,
+            "description": "The user's last utterance in a text string.",
+            "defaultValue": null
+          },
+          "vf_memory": {
+            "isSystem": true,
+            "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+            "defaultValue": null
+          },
+          "image_url": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "URL of the uploaded image",
+            "defaultValue": null
+          },
+          "openai_response": {
+            "isArray": false,
+            "isSystem": false,
+            "datatype": "any",
+            "description": "Response returned from OpenAI API",
+            "defaultValue": null
+          }
+        },
+        "cmsEntities": {}
+      },
+      "settings": {},
+      "platform": "webchat"
+    },
+    "settings": {
+      "widget": {
+        "type": "chat",
+        "chat": {
+          "voiceInput": true,
+          "voiceOutput": true,
+          "renderMode": "widget",
+          "headerImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1742714569341-paul_bettany_as_vision.jpg"
+          },
+          "agentImage": {
+            "enabled": true,
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1742714575901-paul_bettany_as_vision.jpg"
+          },
+          "banner": {
+            "enabled": true,
+            "title": "Vision",
+            "description": "I can help you see the reality",
+            "imageURL": "https://cm4-production-assets.s3.amazonaws.com/1742714584779-paul_bettany_as_vision.jpg"
+          },
+          "placeholderText": "Message...",
+          "aiDisclaimer": {
+            "enabled": true,
+            "text": "Generated by AI, double-check for accuracy."
+          },
+          "handoffToAgentImageURL": ""
+        },
+        "voice": {
+          "renderMode": "full",
+          "content": {
+            "callToActionText": "How can I help you?",
+            "startButtonText": "Start a call",
+            "listeningText": "Listening...",
+            "talkingText": "Talk to interrupt",
+            "endButtonText": "End"
+          }
+        },
+        "common": {
+          "fontFamily": "UCity Pro",
+          "launcher": {
+            "text": "Vision",
+            "type": "both"
+          },
+          "poweredBy": false,
+          "footerLink": {
+            "enabled": true
+          },
+          "position": "right",
+          "sideSpacing": "24",
+          "bottomSpacing": "24",
+          "primaryColor": {
+            "color": "#A82F4B",
+            "palette": {
+              "50": "#F9EBEE",
+              "100": "#F4D7DE",
+              "200": "#E9AFBD",
+              "300": "#DE879B",
+              "400": "#D2607A",
+              "500": "#C73859",
+              "600": "#9F2D47",
+              "700": "#782135",
+              "800": "#501624",
+              "900": "#280B12"
+            }
+          },
+          "persistence": "localStorage"
+        }
+      },
+      "intentClassification": {
+        "type": "nlu",
+        "params": {
+          "confidence": 0.6
+        }
+      }
+    },
+    "topics": [
+      {
+        "type": "DIAGRAM",
+        "sourceID": "64386e21bb106b044ea34b78"
+      }
+    ],
+    "variables": [
+      "anthropic_model",
+      "anthropic_model_used",
+      "anthropic_usage",
+      "openai_usage",
+      "openai_model",
+      "anthropic_response",
+      "vision_response",
+      "supabase_project_id",
+      "payload",
+      "image_upload_id",
+      "sessions",
+      "user_id",
+      "timestamp",
+      "platform",
+      "locale",
+      "intent_confidence",
+      "last_response",
+      "last_event",
+      "last_utterance",
+      "vf_memory",
+      "image_url",
+      "openai_response"
+    ],
+    "_id": "67dbd2d068173bf6822583b9",
+    "updatedAt": "2025-03-25T21:47:01.519Z",
+    "publishedAt": "2024-09-22T02:26:55.448Z",
+    "domains": [
+      {
+        "id": "cla06iyr900b206pkh8d4ap8n",
+        "name": "Home",
+        "live": true,
+        "topicIDs": [
+          "64386e21bb106b044ea34b78"
+        ],
+        "rootDiagramID": "64386e21bb106b044ea34b78",
+        "updatedBy": 885906,
+        "updatedAt": "2025-03-20T08:33:20.419Z"
+      }
+    ],
+    "projectID": "67dbd2d068173bf6822583b8",
+    "rootDiagramID": "64386e21bb106b044ea34b78",
+    "templateDiagramID": "643872531e80120007759e05"
+  },
+  "diagrams": {
+    "643872531e80120007759e05": {
+      "name": "Template Diagram",
+      "type": "TEMPLATE",
+      "zoom": 100,
+      "nodes": {},
+      "offsetX": 0,
+      "offsetY": 0,
+      "modified": 1681420883,
+      "creatorID": 885906,
+      "variables": [],
+      "menuItems": [],
+      "_id": "67dbd2d068173bf6822583c4",
+      "diagramID": "643872531e80120007759e05",
+      "versionID": "67dbd2d068173bf6822583b9"
+    },
+    "64386e21bb106b044ea34b78": {
+      "name": "ROOT",
+      "type": "TOPIC",
+      "zoom": 100,
+      "nodes": {
+        "start00000000000000000000": {
+          "type": "start",
+          "data": {
+            "name": "Start",
+            "color": "#56b365",
+            "steps": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": "67dbd40517752672c1e0d061",
+                  "id": "6032afcf359e8c14c06c0319",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -4408.78,
+                          1319.73
+                        ]
+                      },
+                      {
+                        "point": [
+                          -4337.95,
+                          1319.73
+                        ]
+                      },
+                      {
+                        "point": [
+                          -4337.95,
+                          1253.88
+                        ]
+                      },
+                      {
+                        "point": [
+                          -4267.12,
+                          1253.88
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "dynamic": []
+            },
+            "label": "Start"
+          },
+          "nodeID": "start00000000000000000000",
+          "coords": [
+            -4473.415018729939,
+            1297.725654692079
+          ]
+        },
+        "67dbd39517752672c1e0d02c": {
+          "type": "block",
+          "data": {
+            "name": "Upload Document",
+            "color": "#5b9fd7",
+            "steps": [
+              "67dbd39517752672c1e0d030",
+              "67dbd39517752672c1e0d033"
+            ]
+          },
+          "nodeID": "67dbd39517752672c1e0d02c",
+          "coords": [
+            -3204.0884069664485,
+            1225.8575571823214
+          ]
+        },
+        "67dbd39517752672c1e0d02e": {
+          "type": "block",
+          "data": {
+            "name": "OpenAI Vision API Call",
+            "color": "#70a59a",
+            "steps": [
+              "67dbd39517752672c1e0d03b"
+            ]
+          },
+          "nodeID": "67dbd39517752672c1e0d02e",
+          "coords": [
+            -2209.4087033502883,
+            1225.1774595441464
+          ]
+        },
+        "67dbd39517752672c1e0d030": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67dbd3989481aeeff1f38eaf",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "67dbd39517752672c1e0d031"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dbd39517752672c1e0d030"
+        },
+        "67dbd39517752672c1e0d033": {
+          "type": "trace",
+          "data": {
+            "name": "ext_image_upload",
+            "_v": 1,
+            "paths": [
+              {
+                "label": "complete",
+                "isDefault": true
+              },
+              {
+                "label": "error",
+                "isDefault": false
+              }
+            ],
+            "payload": {
+              "name": "ext_image_upload",
+              "body": "{payload}",
+              "bodyType": "json",
+              "scope": "local",
+              "isBlocking": true
+            },
+            "defaultPath": 0,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": [
+                {
+                  "type": "",
+                  "target": "67e01ce343821892e8030a57",
+                  "id": "67dbd39517752672c1e0d034",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -3038.09,
+                          1439.61
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2941.7,
+                          1439.61
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2941.7,
+                          1250.37
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2845.3,
+                          1250.37
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "",
+                  "target": "67dbd44817752672c1e0d073",
+                  "id": "67dbd39517752672c1e0d035",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -3038.09,
+                          1494.11
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2941.4,
+                          1494.11
+                        ],
+                        "locked": true
+                      },
+                      {
+                        "point": [
+                          -2941.4,
+                          1798.3436373811196
+                        ],
+                        "locked": true
+                      },
+                      {
+                        "point": [
+                          -944.4093135228343,
+                          1798.3436373811196
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "nodeID": "67dbd39517752672c1e0d033"
+        },
+        "67dbd39517752672c1e0d037": {
+          "type": "code",
+          "data": {
+            "name": "",
+            "code": "// To pass vision models\nimage_url = last_event.payload.url\n\n// To pass to database\nimage_upload_id = last_event.payload.upload.id\n\n// To print to traces for debugging purposes\npayload = JSON.stringify({\n  message: `Supabase upload: ${JSON.stringify(last_event.payload.upload)}`\n})\n",
+            "paths": [],
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "67dbd39517752672c1e0d039",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -2516.04,
+                          1365.79
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2492.04,
+                          1365.79
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2492.04,
+                          1527.63
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2657.06,
+                          1527.63
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2657.06,
+                          1689.46
+                        ],
+                        "toTop": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "fail": {
+                  "type": "fail",
+                  "target": null,
+                  "id": "67dbd39517752672c1e0d038",
+                  "data": {}
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dbd39517752672c1e0d037"
+        },
+        "67dbd39517752672c1e0d03b": {
+          "type": "function",
+          "data": {
+            "name": "OpenAI: Vision with Responses",
+            "functionID": "67dfb911a6193729493ff98d",
+            "inputMapping": {
+              "openai_token": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "66e9d234b95a902207f615de"
+                    },
+                    " "
+                  ]
+                }
+              ],
+              "max_tokens": [
+                {
+                  "text": [
+                    "500"
+                  ]
+                }
+              ],
+              "openai_api_key": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "secretID": "67dbd31d68173bf6822583de"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "image_url": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "66e9d454b95a902207f61873"
+                    },
+                    " "
+                  ]
+                }
+              ],
+              "query": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "66e9d4b5b95a902207f618ba"
+                    },
+                    " "
+                  ]
+                }
+              ],
+              "prompt": [
+                {
+                  "text": [
+                    "What do you see in this image?"
+                  ]
+                }
+              ],
+              "model": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "67dfb9efa6193729493ffa05"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "max_output_tokens": [
+                {
+                  "text": [
+                    "500"
+                  ]
+                }
+              ],
+              "detail": [
+                {
+                  "text": [
+                    "low"
+                  ]
+                }
+              ],
+              "image_detail": [
+                {
+                  "text": [
+                    "low"
+                  ]
+                }
+              ],
+              "api_key": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "secretID": "67dbd31d68173bf6822583de"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "file_data": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "66e9d454b95a902207f61873"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "file_type": [
+                {
+                  "text": [
+                    "{67e024c2a619372949402c4d}"
+                  ]
+                }
+              ]
+            },
+            "outputMapping": {
+              "response": "66e9d49cb95a902207f618af",
+              "output_text": "66e9d49cb95a902207f618af",
+              "output_usage": "67dff4f2a619372949401406"
+            },
+            "portsV2": {
+              "byKey": {
+                "__vf__default": {
+                  "type": "",
+                  "target": null,
+                  "id": "67dbd39517752672c1e0d03c"
+                },
+                "67dfb911a6193729493ff98e": {
+                  "id": "67dfbd2643821892e80304fe",
+                  "target": "67dbd42917752672c1e0d06a",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -2043.41,
+                          1415.68
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1962.74,
+                          1415.68
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1962.74,
+                          1250.62
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1882.08,
+                          1250.62
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "67dfb911a6193729493ff98f": {
+                  "id": "67dfbd2643821892e80304ff",
+                  "target": "67dbd44817752672c1e0d073",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -2043.41,
+                          1469.68
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1940.13,
+                          1469.68
+                        ],
+                        "locked": true
+                      },
+                      {
+                        "point": [
+                          -1940.13,
+                          1798.3436373811196
+                        ],
+                        "locked": true
+                      },
+                      {
+                        "point": [
+                          -944.4093135228343,
+                          1798.3436373811196
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dbd39517752672c1e0d03b"
+        },
+        "67dbd40517752672c1e0d061": {
+          "type": "block",
+          "data": {
+            "name": "Welcome",
+            "steps": [
+              "67dfb9e043821892e80304f0"
+            ],
+            "color": "#dc8879"
+          },
+          "nodeID": "67dbd40517752672c1e0d061",
+          "coords": [
+            -4102.121714759709,
+            1226.8809442284653
+          ]
+        },
+        "67dbd42917752672c1e0d068": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67dfe8da43821892e80305f8",
+                  "id": "67dbd42917752672c1e0d069",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -1531.71,
+                          1313.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1476.27,
+                          1313.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1476.27,
+                          1240.88
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1420.83,
+                          1240.88
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "messageID": "67dbd43868173bf682258438"
+          },
+          "nodeID": "67dbd42917752672c1e0d068"
+        },
+        "67dbd42917752672c1e0d06a": {
+          "type": "block",
+          "data": {
+            "name": "Display OpenAI Response",
+            "steps": [
+              "67dbd42917752672c1e0d068",
+              "67dff60443821892e80307e4"
+            ],
+            "color": "#56b365"
+          },
+          "nodeID": "67dbd42917752672c1e0d06a",
+          "coords": [
+            -1717.0805464563966,
+            1223.6205383312983
+          ]
+        },
+        "67dbd44817752672c1e0d071": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67dbd44868173bf682258447",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "67dbd44817752672c1e0d072"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dbd44817752672c1e0d071"
+        },
+        "67dbd44817752672c1e0d073": {
+          "type": "block",
+          "data": {
+            "name": "Handle Error",
+            "steps": [
+              "67dbd44817752672c1e0d071",
+              "67dd1e26fff5a71260911aae"
+            ],
+            "color": "#CB627B"
+          },
+          "nodeID": "67dbd44817752672c1e0d073",
+          "coords": [
+            -779.4121004930724,
+            1771.3453129651464
+          ]
+        },
+        "67dbd48017752672c1e0d07f": {
+          "type": "block",
+          "data": {
+            "name": "Vision Response",
+            "steps": [
+              "67dfeecf43821892e80306e9",
+              "67dfeef643821892e80306ee"
+            ],
+            "color": "#bc88ce"
+          },
+          "nodeID": "67dbd48017752672c1e0d07f",
+          "coords": [
+            -308.9445798128761,
+            1225.2704624552762
+          ]
+        },
+        "67dbf070e62fc9e8697fb711": {
+          "type": "exit",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dbf070e62fc9e8697fb711"
+        },
+        "67dd1dd5fff5a71260911aa2": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "67dd1dd5fff5a71260911aa3"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "messageID": "67dd1df69a9d805ec7145b37"
+          },
+          "nodeID": "67dd1dd5fff5a71260911aa2"
+        },
+        "67dd1dd5fff5a71260911aa4": {
+          "type": "block",
+          "data": {
+            "name": "End",
+            "steps": [
+              "67dd1dd5fff5a71260911aa2",
+              "67dbf070e62fc9e8697fb711"
+            ],
+            "color": ""
+          },
+          "nodeID": "67dd1dd5fff5a71260911aa4",
+          "coords": [
+            148.0980347016026,
+            1223.0634116050696
+          ]
+        },
+        "67dd1e26fff5a71260911aae": {
+          "type": "exit",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dd1e26fff5a71260911aae"
+        },
+        "67dfb9e043821892e80304f0": {
+          "type": "set-v3",
+          "data": {
+            "name": "",
+            "items": [
+              {
+                "id": "cm8lbqcgs009o3b7qpcwespfs",
+                "type": "value",
+                "label": null,
+                "value": [
+                  {
+                    "text": [
+                      "gpt-4o"
+                    ]
+                  }
+                ],
+                "variableID": "67dfb9efa6193729493ffa05"
+              },
+              {
+                "id": "cm8lbqt8500a33b7qzm1b0daz",
+                "type": "value",
+                "label": null,
+                "value": [
+                  {
+                    "text": [
+                      "claude-3-7-sonnet-latest"
+                    ]
+                  }
+                ],
+                "variableID": "67dfba0fa6193729493ffa0a"
+              }
+            ],
+            "label": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67e0104343821892e8030a3a",
+                  "id": "67dfb9e043821892e80304f1",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dfb9e043821892e80304f0"
+        },
+        "67dfe8da43821892e80305f6": {
+          "type": "function",
+          "data": {
+            "inputMapping": {
+              "image_url": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "66e9d454b95a902207f61873"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "prompt": [
+                {
+                  "text": [
+                    "What is in the above image?"
+                  ]
+                }
+              ],
+              "api_key": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "secretID": "67dfe95ba619372949400ce8"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "model": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "variableID": "67dfba0fa6193729493ffa0a"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "max_tokens": [
+                {
+                  "text": [
+                    "500"
+                  ]
+                }
+              ]
+            },
+            "outputMapping": {
+              "stop_reason": "67dfe9cda619372949400d3a",
+              "output": "67dfe9cda619372949400d3a",
+              "output_text": "67dfe9cda619372949400d3a",
+              "output_model": "67dff49ca6193729494013dc",
+              "output_usage": "67dff4aea6193729494013e6"
+            },
+            "portsV2": {
+              "byKey": {
+                "__vf__default": {
+                  "type": "",
+                  "target": null,
+                  "id": "67dfe8da43821892e80305f7"
+                },
+                "67dfdd33924a57df45cb1322": {
+                  "id": "67dfe8dc43821892e80305fe",
+                  "target": "67dbd44817752672c1e0d073",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -1089.83,
+                          1415.99
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1017.12,
+                          1415.99
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1017.12,
+                          1798.35
+                        ]
+                      },
+                      {
+                        "point": [
+                          -944.41,
+                          1798.35
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                },
+                "67dfdd33924a57df45cb1323": {
+                  "id": "67dfe8dc43821892e80305ff",
+                  "target": "67dfe9e943821892e8030646",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -1089.83,
+                          1469.99
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1019.51,
+                          1469.99
+                        ]
+                      },
+                      {
+                        "point": [
+                          -1019.51,
+                          1250.28
+                        ]
+                      },
+                      {
+                        "point": [
+                          -949.19,
+                          1250.28
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "functionID": "67dfdd33924a57df45cb1321",
+            "name": "Anthropic: Vision with Claude"
+          },
+          "nodeID": "67dfe8da43821892e80305f6"
+        },
+        "67dfe8da43821892e80305f8": {
+          "type": "block",
+          "data": {
+            "name": "Anthropic Vision API Call",
+            "steps": [
+              "67dfe8da43821892e80305f6"
+            ],
+            "color": "#70a59a"
+          },
+          "nodeID": "67dfe8da43821892e80305f8",
+          "coords": [
+            -1255.8252516134667,
+            1225.4857010550722
+          ]
+        },
+        "67dfe9e943821892e8030646": {
+          "type": "block",
+          "data": {
+            "name": "Display Anthropic Response",
+            "color": "#56b365",
+            "steps": [
+              "67dfe9e943821892e8030648",
+              "67dff62743821892e80307fa"
+            ]
+          },
+          "nodeID": "67dfe9e943821892e8030646",
+          "coords": [
+            -784.193443097591,
+            1223.283063858034
+          ]
+        },
+        "67dfe9e943821892e8030648": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67dfe9e9e60253bd1e4bc485",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67dbd48017752672c1e0d07f",
+                  "id": "67dfe9e943821892e8030649",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -618.19,
+                          1300.17
+                        ]
+                      },
+                      {
+                        "point": [
+                          -555.16,
+                          1300.17
+                        ]
+                      },
+                      {
+                        "point": [
+                          -555.16,
+                          1236.11
+                        ]
+                      },
+                      {
+                        "point": [
+                          -492.13,
+                          1236.11
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dfe9e943821892e8030648"
+        },
+        "67dfeecf43821892e80306e9": {
+          "type": "set-v3",
+          "data": {
+            "name": "",
+            "items": [
+              {
+                "id": "cm8ljswgr04mm3b7q9pqv5lc8",
+                "type": "prompt",
+                "label": null,
+                "value": "67dbd49f9481aeeff1f38eb2",
+                "variableID": "67dfeee3a619372949401079"
+              }
+            ],
+            "label": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "67dfeecf43821892e80306ea"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dfeecf43821892e80306e9"
+        },
+        "67dfeef643821892e80306ee": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67dd1dd5fff5a71260911aa4",
+                  "id": "67dfeef643821892e80306ef",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -142.94,
+                          1400.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          -79.92,
+                          1400.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          -79.92,
+                          1250.06
+                        ]
+                      },
+                      {
+                        "point": [
+                          -16.9,
+                          1250.06
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "messageID": "67dfeefba61937294940108c"
+          },
+          "nodeID": "67dfeef643821892e80306ee"
+        },
+        "67dff60443821892e80307e4": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67dff604e60253bd1e4bc4f5",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67dfe8da43821892e80305f8",
+                  "id": "67dff60443821892e80307e5",
+                  "data": {}
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dff60443821892e80307e4"
+        },
+        "67dff62743821892e80307fa": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67dff627e60253bd1e4bc4f8",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67dbd48017752672c1e0d07f",
+                  "id": "67dff62743821892e80307fb",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -618.19,
+                          1422.03
+                        ]
+                      },
+                      {
+                        "point": [
+                          -546.07,
+                          1422.03
+                        ]
+                      },
+                      {
+                        "point": [
+                          -546.07,
+                          1252.27
+                        ]
+                      },
+                      {
+                        "point": [
+                          -473.94,
+                          1252.27
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dff62743821892e80307fa",
+          "coords": [
+            0,
+            0
+          ]
+        },
+        "67dff85343821892e8030864": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67dff853a61937294940150f",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": "67e07a64280eeecbcb153317",
+                  "id": "67dff85343821892e8030865",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -2514.3,
+                          1362.87
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2490.3,
+                          1362.87
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2490.3,
+                          1425.87
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2679.38,
+                          1425.87
+                        ]
+                      },
+                      {
+                        "point": [
+                          -2679.38,
+                          1479.29
+                        ],
+                        "toTop": true,
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67dff85343821892e8030864"
+        },
+        "67e0104343821892e8030a38": {
+          "type": "function",
+          "data": {
+            "inputMapping": {
+              "key": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "secretID": "67e00ec3a6193729494020a9"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "id": [
+                {
+                  "text": [
+                    "",
+                    {
+                      "secretID": "67e00eb4a6193729494020a6"
+                    },
+                    ""
+                  ]
+                }
+              ],
+              "bucket": [
+                {
+                  "text": [
+                    "assets"
+                  ]
+                }
+              ]
+            },
+            "outputMapping": {
+              "output": "67e00f0fa6193729494020eb",
+              "payload": "67e00f0fa6193729494020eb"
+            },
+            "portsV2": {
+              "byKey": {
+                "__vf__default": {
+                  "type": "",
+                  "target": null,
+                  "id": "67e0104343821892e8030a39"
+                },
+                "67e0110ea61937294940222b": {
+                  "id": "67e0110e43821892e8030a40",
+                  "target": "67dbd39517752672c1e0d02c",
+                  "type": "",
+                  "data": {
+                    "points": [
+                      {
+                        "point": [
+                          -3475.78,
+                          1371.35
+                        ]
+                      },
+                      {
+                        "point": [
+                          -3422.43,
+                          1371.35
+                        ]
+                      },
+                      {
+                        "point": [
+                          -3422.43,
+                          1252.86
+                        ]
+                      },
+                      {
+                        "point": [
+                          -3369.09,
+                          1252.86
+                        ],
+                        "allowedToTop": true
+                      }
+                    ]
+                  }
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            },
+            "functionID": "67e01047a6193729494021c0",
+            "name": "Supabase: Create Payload"
+          },
+          "nodeID": "67e0104343821892e8030a38"
+        },
+        "67e0104343821892e8030a3a": {
+          "type": "block",
+          "data": {
+            "name": "Create Payload",
+            "steps": [
+              "67e0104343821892e8030a38"
+            ],
+            "color": ""
+          },
+          "nodeID": "67e0104343821892e8030a3a",
+          "coords": [
+            -3641.7772555889437,
+            1227.345955216142
+          ]
+        },
+        "67e01ce343821892e8030a57": {
+          "type": "block",
+          "data": {
+            "name": "Process Upload",
+            "steps": [
+              "67dbd39517752672c1e0d037",
+              "67dff85343821892e8030864"
+            ],
+            "color": ""
+          },
+          "nodeID": "67e01ce343821892e8030a57",
+          "coords": [
+            -2680.3038126894407,
+            1223.3702988247958
+          ]
+        },
+        "67e07a64280eeecbcb153315": {
+          "type": "trace",
+          "data": {
+            "name": "debug",
+            "_v": 1,
+            "paths": [
+              {
+                "label": "default",
+                "isDefault": true
+              }
+            ],
+            "payload": {
+              "name": "debug",
+              "body": "{payload}",
+              "bodyType": "json",
+              "scope": "local",
+              "isBlocking": false
+            },
+            "defaultPath": 0,
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {},
+              "dynamic": [
+                {
+                  "type": "",
+                  "target": "67dbd39517752672c1e0d02e",
+                  "id": "67e07a64280eeecbcb153316",
+                  "data": {}
+                }
+              ]
+            }
+          },
+          "nodeID": "67e07a64280eeecbcb153315"
+        },
+        "67e07a64280eeecbcb153317": {
+          "type": "block",
+          "data": {
+            "name": "Debug Upload",
+            "steps": [
+              "67e30fd0ba11d771c5814d11",
+              "67e07a64280eeecbcb153315"
+            ],
+            "color": "#dc8879"
+          },
+          "nodeID": "67e07a64280eeecbcb153317",
+          "coords": [
+            -2679.377368839537,
+            1479.2891362277371
+          ]
+        },
+        "67e30fd0ba11d771c5814d11": {
+          "type": "message",
+          "data": {
+            "name": "",
+            "messageID": "67e30fd23a103c3710116dce",
+            "portsV2": {
+              "byKey": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "67e30fd0ba11d771c5814d12"
+                }
+              },
+              "builtIn": {},
+              "dynamic": []
+            }
+          },
+          "nodeID": "67e30fd0ba11d771c5814d11"
+        },
+        "67e32313a58536bbb2ebe787": {
+          "type": "markup_text",
+          "data": {
+            "scale": 1,
+            "rotate": 0,
+            "content": [
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": "Vision AI with OpenAI and Anthropic models"
+                  }
+                ]
+              },
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": "Template built by "
+                  },
+                  {
+                    "text": "Juan Carlos Quintero",
+                    "fontWeight": "700"
+                  }
+                ]
+              },
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              },
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": "",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 1
+                    }
+                  },
+                  {
+                    "url": "https://moonside.ai/",
+                    "type": "link",
+                    "children": [
+                      {
+                        "text": "Moonside AI",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 1
+                        },
+                        "underline": true
+                      }
+                    ]
+                  },
+                  {
+                    "text": "",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 1
+                    }
+                  }
+                ]
+              },
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": "",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 1
+                    }
+                  },
+                  {
+                    "url": "https://www.voiceflow.com/contributors/juan-carlos-quintero",
+                    "type": "link",
+                    "children": [
+                      {
+                        "text": "Voiceflow Expert Page",
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 1
+                        },
+                        "underline": true
+                      }
+                    ]
+                  },
+                  {
+                    "text": "",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 1
+                    }
+                  }
+                ]
+              },
+              {
+                "textAlign": "left",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "url": "https://github.com/juancarlosqr/vf-vision",
+                    "type": "link",
+                    "children": [
+                      {
+                        "color": {
+                          "r": 0,
+                          "g": 0,
+                          "b": 0,
+                          "a": 1
+                        },
+                        "text": "Get Extension",
+                        "underline": true
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "overrideWidth": 438,
+            "backgroundColor": {
+              "r": 135,
+              "g": 234,
+              "b": 238,
+              "a": 1
+            },
+            "name": "Block"
+          },
+          "nodeID": "67e32313a58536bbb2ebe787",
+          "coords": [
+            -4052.4953546863435,
+            1593.0268818275667
+          ]
+        },
+        "67e323ada58536bbb2ebe78a": {
+          "type": "markup_image",
+          "data": {
+            "url": "https://cm4-production-assets.s3.amazonaws.com/1742939053722-avatar.png",
+            "width": 215.36930197097132,
+            "height": 215.36930197097132,
+            "rotate": 0,
+            "name": "Block"
+          },
+          "nodeID": "67e323ada58536bbb2ebe78a",
+          "coords": [
+            -4155.26615548511,
+            1700.141739986546
+          ]
+        }
+      },
+      "offsetX": 4138.732014983952,
+      "offsetY": -738.1805237536632,
+      "modified": 1681419809,
+      "creatorID": 885906,
+      "variables": [],
+      "menuItems": [
+        {
+          "type": "NODE",
+          "sourceID": "start00000000000000000000"
+        }
+      ],
+      "menuNodeIDs": [],
+      "intentStepIDs": [],
+      "_id": "67dbd2d068173bf6822583c5",
+      "diagramID": "64386e21bb106b044ea34b78",
+      "versionID": "67dbd2d068173bf6822583b9"
+    }
+  },
+  "flows": [],
+  "entities": [],
+  "entityVariants": [],
+  "intents": [
+    {
+      "id": "6579c6bf984565862f64b783",
+      "name": "Yes",
+      "createdByID": 969814,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "6579c778dd3cca0fe0e0b152",
+      "name": "No",
+      "createdByID": 969814,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "None",
+      "name": "None",
+      "createdByID": 969814,
+      "folderID": null,
+      "description": null,
+      "automaticReprompt": false,
+      "entityOrder": [],
+      "automaticRepromptSettings": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    }
+  ],
+  "utterances": [
+    {
+      "id": "65d72a6aa845250f3bd1b9af",
+      "text": [
+        {
+          "text": [
+            "sure"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b0",
+      "text": [
+        {
+          "text": [
+            "certainly"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b1",
+      "text": [
+        {
+          "text": [
+            "affirmative"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b2",
+      "text": [
+        {
+          "text": [
+            "okay"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b3",
+      "text": [
+        {
+          "text": [
+            "ok"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b4",
+      "text": [
+        {
+          "text": [
+            "ya"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b5",
+      "text": [
+        {
+          "text": [
+            "yep"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b6",
+      "text": [
+        {
+          "text": [
+            "yup"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b7",
+      "text": [
+        {
+          "text": [
+            "yea"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b8",
+      "text": [
+        {
+          "text": [
+            "yes"
+          ]
+        }
+      ],
+      "intentID": "6579c6bf984565862f64b783",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9b9",
+      "text": [
+        {
+          "text": [
+            "negative"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9ba",
+      "text": [
+        {
+          "text": [
+            "nevermind"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9bb",
+      "text": [
+        {
+          "text": [
+            "not"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9bc",
+      "text": [
+        {
+          "text": [
+            "no thanks"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9bd",
+      "text": [
+        {
+          "text": [
+            "no way"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9be",
+      "text": [
+        {
+          "text": [
+            "not now"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9bf",
+      "text": [
+        {
+          "text": [
+            "nah"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9c0",
+      "text": [
+        {
+          "text": [
+            "nay"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9c1",
+      "text": [
+        {
+          "text": [
+            "nope"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    },
+    {
+      "id": "65d72a6aa845250f3bd1b9c2",
+      "text": [
+        {
+          "text": [
+            "no"
+          ]
+        }
+      ],
+      "intentID": "6579c778dd3cca0fe0e0b152",
+      "language": "en-us",
+      "createdAt": "2024-05-31T14:48:35.000Z"
+    }
+  ],
+  "requiredEntities": [],
+  "folders": [],
+  "responses": [
+    {
+      "id": "67dd1df69a9d805ec7145b37",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-21T08:06:14.000Z",
+      "updatedAt": "2025-03-21T08:06:24.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dfe9e9e60253bd1e4bc485",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-23T11:00:58.000Z",
+      "updatedAt": "2025-03-23T11:00:58.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dfeefba61937294940108c",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-23T11:22:35.000Z",
+      "updatedAt": "2025-03-23T11:23:00.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dff604e60253bd1e4bc4f5",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-23T11:52:36.000Z",
+      "updatedAt": "2025-03-23T11:52:36.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dff627e60253bd1e4bc4f8",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-23T11:53:11.000Z",
+      "updatedAt": "2025-03-23T11:53:11.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dff853a61937294940150f",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-23T12:02:27.000Z",
+      "updatedAt": "2025-03-23T12:02:50.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dbd44868173bf682258447",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-20T08:39:37.000Z",
+      "updatedAt": "2025-03-20T08:39:41.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dbd3989481aeeff1f38eaf",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-20T08:36:41.000Z",
+      "updatedAt": "2025-03-20T08:36:41.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dbd43868173bf682258438",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-20T08:39:21.000Z",
+      "updatedAt": "2025-03-20T08:39:27.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67e30fd23a103c3710116dce",
+      "name": "",
+      "createdByID": 885906,
+      "folderID": null,
+      "type": "message",
+      "draft": false,
+      "createdAt": "2025-03-25T20:19:30.000Z",
+      "updatedAt": "2025-03-25T20:19:36.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "responseMessages": [
+    {
+      "id": "67e30fd23a103c3710116dd0",
+      "discriminatorID": "67e30fd23a103c3710116dcf",
+      "text": [
+        {
+          "text": [
+            "ID: ",
+            {
+              "variableID": "67e316693a103c37101172cb"
+            },
+            ""
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-25T20:19:30.000Z"
+    },
+    {
+      "id": "67dd1df69a9d805ec7145b39",
+      "discriminatorID": "67dd1df69a9d805ec7145b38",
+      "text": [
+        {
+          "text": [
+            "Do you see things more clearly now?"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-21T08:06:14.000Z"
+    },
+    {
+      "id": "67dfe9e9e60253bd1e4bc487",
+      "discriminatorID": "67dfe9e9e60253bd1e4bc486",
+      "text": [
+        {
+          "text": [
+            "",
+            {
+              "variableID": "67dfba0fa6193729493ffa0a"
+            },
+            " says:"
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                "\"",
+                {
+                  "variableID": "67dfe9cda619372949400d3a"
+                },
+                "\""
+              ]
+            }
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-23T11:00:58.000Z"
+    },
+    {
+      "id": "67dfeefba61937294940108e",
+      "discriminatorID": "67dfeefba61937294940108d",
+      "text": [
+        {
+          "text": [
+            "I say:"
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "\"",
+            {
+              "variableID": "67dfeee3a619372949401079"
+            },
+            "\""
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-23T11:22:35.000Z"
+    },
+    {
+      "id": "67dff604e60253bd1e4bc4f7",
+      "discriminatorID": "67dff604e60253bd1e4bc4f6",
+      "text": [
+        {
+          "text": [
+            "Usage:"
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "<pre>",
+            {
+              "variableID": "67dff4f2a619372949401406"
+            },
+            "</pre>"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-23T11:52:36.000Z"
+    },
+    {
+      "id": "67dff627e60253bd1e4bc4fa",
+      "discriminatorID": "67dff627e60253bd1e4bc4f9",
+      "text": [
+        {
+          "text": [
+            "Model: ",
+            {
+              "variableID": "67dff49ca6193729494013dc"
+            },
+            ""
+          ]
+        },
+        {
+          "text": [
+            "Usage:"
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                {
+                  "text": [
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "text": [
+                "<pre>",
+                {
+                  "variableID": "67dff4aea6193729494013e6"
+                },
+                "</pre>"
+              ]
+            }
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-23T11:53:11.000Z"
+    },
+    {
+      "id": "67dff853a619372949401511",
+      "discriminatorID": "67dff853a619372949401510",
+      "text": [
+        {
+          "text": [
+            "<img src=\"",
+            {
+              "variableID": "66e9d454b95a902207f61873"
+            },
+            "\" alt=\"\" />"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-23T12:02:27.000Z"
+    },
+    {
+      "id": "67dbd44868173bf682258449",
+      "discriminatorID": "67dbd44868173bf682258448",
+      "text": [
+        {
+          "text": [
+            "Errors are part of our shared reality"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-20T08:39:37.000Z"
+    },
+    {
+      "id": "67dbd3989481aeeff1f38eb1",
+      "discriminatorID": "67dbd3989481aeeff1f38eb0",
+      "text": [
+        {
+          "text": [
+            "Upload a file so I can tell you what I see"
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-20T08:36:41.000Z"
+    },
+    {
+      "id": "67dbd43868173bf68225843a",
+      "discriminatorID": "67dbd43868173bf682258439",
+      "text": [
+        {
+          "text": [
+            "",
+            {
+              "variableID": "67dfb9efa6193729493ffa05"
+            },
+            " says:"
+          ]
+        },
+        {
+          "text": [
+            {
+              "text": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "text": [
+            "\"",
+            {
+              "variableID": "66e9d49cb95a902207f618af"
+            },
+            "\""
+          ]
+        }
+      ],
+      "condition": null,
+      "delay": null,
+      "createdAt": "2025-03-20T08:39:21.000Z"
+    }
+  ],
+  "responseDiscriminators": [
+    {
+      "id": "67dfe9e9e60253bd1e4bc486",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dfe9e9e60253bd1e4bc485",
+      "variantOrder": [
+        "67dfe9e9e60253bd1e4bc487"
+      ],
+      "createdAt": "2025-03-23T11:00:58.000Z"
+    },
+    {
+      "id": "67dfeefba61937294940108d",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dfeefba61937294940108c",
+      "variantOrder": [
+        "67dfeefba61937294940108e"
+      ],
+      "createdAt": "2025-03-23T11:22:35.000Z"
+    },
+    {
+      "id": "67dff604e60253bd1e4bc4f6",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dff604e60253bd1e4bc4f5",
+      "variantOrder": [
+        "67dff604e60253bd1e4bc4f7"
+      ],
+      "createdAt": "2025-03-23T11:52:36.000Z"
+    },
+    {
+      "id": "67dff627e60253bd1e4bc4f9",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dff627e60253bd1e4bc4f8",
+      "variantOrder": [
+        "67dff627e60253bd1e4bc4fa"
+      ],
+      "createdAt": "2025-03-23T11:53:11.000Z"
+    },
+    {
+      "id": "67dff853a619372949401510",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dff853a61937294940150f",
+      "variantOrder": [
+        "67dff853a619372949401511"
+      ],
+      "createdAt": "2025-03-23T12:02:27.000Z"
+    },
+    {
+      "id": "67dbd44868173bf682258448",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dbd44868173bf682258447",
+      "variantOrder": [
+        "67dbd44868173bf682258449"
+      ],
+      "createdAt": "2025-03-20T08:39:37.000Z"
+    },
+    {
+      "id": "67dbd3989481aeeff1f38eb0",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dbd3989481aeeff1f38eaf",
+      "variantOrder": [
+        "67dbd3989481aeeff1f38eb1"
+      ],
+      "createdAt": "2025-03-20T08:36:41.000Z"
+    },
+    {
+      "id": "67dbd43868173bf682258439",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dbd43868173bf682258438",
+      "variantOrder": [
+        "67dbd43868173bf68225843a"
+      ],
+      "createdAt": "2025-03-20T08:39:21.000Z"
+    },
+    {
+      "id": "67dd1df69a9d805ec7145b38",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67dd1df69a9d805ec7145b37",
+      "variantOrder": [
+        "67dd1df69a9d805ec7145b39"
+      ],
+      "createdAt": "2025-03-21T08:06:14.000Z"
+    },
+    {
+      "id": "67e30fd23a103c3710116dcf",
+      "channel": "default",
+      "language": "en-us",
+      "responseID": "67e30fd23a103c3710116dce",
+      "variantOrder": [
+        "67e30fd23a103c3710116dd0"
+      ],
+      "createdAt": "2025-03-25T20:19:30.000Z"
+    }
+  ],
+  "variables": [
+    {
+      "id": "67dfba0fa6193729493ffa0a",
+      "name": "anthropic_model",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Model to use when calling Anthropic API",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T07:36:48.000Z",
+      "updatedAt": "2025-03-23T12:16:03.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dff49ca6193729494013dc",
+      "name": "anthropic_model_used",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Model used by Anthropic API call",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T11:46:37.000Z",
+      "updatedAt": "2025-03-23T12:16:00.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dff4aea6193729494013e6",
+      "name": "anthropic_usage",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Usage from Anthropic API call",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T11:46:55.000Z",
+      "updatedAt": "2025-03-23T12:15:53.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dff4f2a619372949401406",
+      "name": "openai_usage",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Usage from OpenAI API call",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T11:48:03.000Z",
+      "updatedAt": "2025-03-23T12:15:47.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dfb9efa6193729493ffa05",
+      "name": "openai_model",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Model to use when calling OpenAI API",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T07:36:15.000Z",
+      "updatedAt": "2025-03-23T12:15:40.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dfe9cda619372949400d3a",
+      "name": "anthropic_response",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Response returned from Anthropic API",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T11:00:29.000Z",
+      "updatedAt": "2025-03-23T12:15:56.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dfeee3a619372949401079",
+      "name": "vision_response",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#bc88ce",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Generated AI response from prompt",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T11:22:12.000Z",
+      "updatedAt": "2025-03-23T12:10:50.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67e00f80a619372949402155",
+      "name": "supabase_project_id",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "ID of Supabase project",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T13:41:20.000Z",
+      "updatedAt": "2025-03-23T13:41:20.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67e00f0fa6193729494020eb",
+      "name": "payload",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Payload to send to upload extension",
+      "defaultValue": null,
+      "createdAt": "2025-03-23T13:39:28.000Z",
+      "updatedAt": "2025-03-23T13:39:28.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67e316693a103c37101172cb",
+      "name": "image_upload_id",
+      "createdByID": 885906,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "ID of upload in Supabase",
+      "defaultValue": null,
+      "createdAt": "2025-03-25T20:47:38.000Z",
+      "updatedAt": "2025-03-25T20:47:38.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "sessions",
+      "name": "sessions",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The number of times a particular user has opened the app.",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "user_id",
+      "name": "user_id",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's unique ID.",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "timestamp",
+      "name": "timestamp",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "UNIX timestamp (number of seconds since January 1st, 1970 at UTC).",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "platform",
+      "name": "platform",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The platform your agent is running on (e.g. \"voiceflow\").",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:38.000Z",
+      "updatedAt": "2024-05-31T14:48:38.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "locale",
+      "name": "locale",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The locale of the user (eg. en-US, en-CA, it-IT, fr-FR, ...).",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "intent_confidence",
+      "name": "intent_confidence",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "number",
+      "description": "The confidence interval (measured as a value from 0 to 100) for the most recently matched intent.",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "last_response",
+      "name": "last_response",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The agent's last response (text/speak) in a string.",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:38.000Z",
+      "updatedAt": "2024-05-31T14:48:38.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "last_event",
+      "name": "last_event",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "any",
+      "description": "The object containing the last event that the user client has triggered.",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:38.000Z",
+      "updatedAt": "2024-05-31T14:48:38.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "last_utterance",
+      "name": "last_utterance",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "The user's last utterance in a text string.",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:35.000Z",
+      "updatedAt": "2024-05-31T14:48:35.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "vf_memory",
+      "name": "vf_memory",
+      "createdByID": 969814,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": true,
+      "datatype": "text",
+      "description": "Last 10 user inputs and agent responses in a string (e.g. \"agent: How can i help?\"\nuser: What's the weather today?).",
+      "defaultValue": null,
+      "createdAt": "2024-05-31T14:48:38.000Z",
+      "updatedAt": "2024-05-31T14:48:38.000Z",
+      "updatedByID": 969814
+    },
+    {
+      "id": "66e9d454b95a902207f61873",
+      "name": "image_url",
+      "createdByID": 955467,
+      "folderID": null,
+      "color": "#515A63",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "URL of the uploaded image",
+      "defaultValue": null,
+      "createdAt": "2024-09-17T19:11:16.000Z",
+      "updatedAt": "2025-03-23T21:09:58.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "66e9d49cb95a902207f618af",
+      "name": "openai_response",
+      "createdByID": 955467,
+      "folderID": null,
+      "color": "#70a59a",
+      "isArray": false,
+      "isSystem": false,
+      "datatype": "any",
+      "description": "Response returned from OpenAI API",
+      "defaultValue": null,
+      "createdAt": "2024-09-17T19:12:29.000Z",
+      "updatedAt": "2025-03-23T12:15:44.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "workflows": [
+    {
+      "id": "6659e3456be1870006afddc0",
+      "name": "Home",
+      "createdByID": 969814,
+      "folderID": null,
+      "status": "complete",
+      "isStart": true,
+      "diagramID": "64386e21bb106b044ea34b78",
+      "assigneeID": 885906,
+      "description": "Workflow to showcase how to do Vision AI",
+      "createdAt": "2024-05-31T14:48:38.000Z",
+      "updatedAt": "2025-03-25T21:50:25.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "attachments": [],
+  "cardButtons": [],
+  "prompts": [
+    {
+      "id": "67dbd49f9481aeeff1f38eb2",
+      "name": "Generate Response",
+      "createdByID": 885906,
+      "folderID": null,
+      "description": "Generate a simple text from Vision AI responses",
+      "settings": {
+        "model": "gpt-4o-mini",
+        "maxTokens": 256,
+        "temperature": 0.6,
+        "useStructuredOutput": false
+      },
+      "messageOrder": [
+        "67dbd49f9481aeeff1f38eb3",
+        "67dbd49f9481aeeff1f38eb4"
+      ],
+      "createdAt": "2025-03-20T08:41:03.000Z",
+      "updatedAt": "2025-03-23T12:18:27.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "promptMessages": [
+    {
+      "id": "67dbd49f9481aeeff1f38eb4",
+      "promptID": "67dbd49f9481aeeff1f38eb2",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "user",
+        "content": [
+          {
+            "text": [
+              "The user shared an image. Use the provided information to generate your own version and insights of the image."
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              "Make it philosophical but interesting. Max 1 or 2 sentences. Don't add quotes to your output."
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              "Here are the notes of your enemies:"
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  {
+                    "text": [
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": [
+                  "",
+                  {
+                    "variableID": "67dfba0fa6193729493ffa0a"
+                  },
+                  " says:"
+                ]
+              },
+              {
+                "text": [
+                  {
+                    "text": [
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": [
+                  "\"",
+                  {
+                    "variableID": "67dfe9cda619372949400d3a"
+                  },
+                  "\""
+                ]
+              },
+              {
+                "text": [
+                  {
+                    "text": [
+                      ""
+                    ]
+                  }
+                ]
+              },
+              {
+                "text": [
+                  "",
+                  {
+                    "variableID": "67dfb9efa6193729493ffa05"
+                  },
+                  "  says:"
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              "\"",
+              {
+                "variableID": "66e9d49cb95a902207f618af"
+              },
+              "\""
+            ]
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "text": [
+              "Your reply:"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-03-20T08:41:04.000Z"
+    },
+    {
+      "id": "67dbd49f9481aeeff1f38eb3",
+      "promptID": "67dbd49f9481aeeff1f38eb2",
+      "pairID": null,
+      "type": "role",
+      "data": {
+        "role": "system",
+        "content": [
+          {
+            "text": [
+              "You are Vision from the Marvel Universe"
+            ]
+          }
+        ]
+      },
+      "createdAt": "2025-03-20T08:41:04.000Z"
+    }
+  ],
+  "events": [],
+  "agents": [],
+  "agentPathTools": [],
+  "agentFunctionTools": [],
+  "agentPathToolVariables": [],
+  "functions": [
+    {
+      "id": "67dfb911a6193729493ff98d",
+      "name": "OpenAI: Vision with Responses",
+      "createdByID": 885906,
+      "folderID": null,
+      "code": "export default async function main({ inputVars }) {\n  /**\n   * Function developed by Juan Carlos Quintero (https://moonside.ai)\n   *\n   * Function to perform Vision AI on images or files (PDF) using the Responses API from OpenAI\n   *\n   * Guide: https://platform.openai.com/docs/guides/images?api-mode=responses\n   * API Reference: https://platform.openai.com/docs/api-reference/responses/create\n   */\n\n  // Extract input variables\n  const { image_url, prompt, model, max_output_tokens, api_key } = inputVars;\n\n  // Prepare request data\n  const requestData = {\n    apiKey: api_key.trim(),\n    imageUrl: image_url.trim(),\n    maxOutputTokens: max_output_tokens.trim(),\n    model: model.trim(),\n    prompt: prompt.trim(),\n  };\n\n  // Validate 'api_key' variable\n  if (!requestData.apiKey) {\n    return errorTrace('Missing variable - api_key', inputVars);\n  }\n  // Validate 'image_url' variable\n  if (!requestData.imageUrl) {\n    return errorTrace(`Missing variable - image_url`, inputVars);\n  }\n  // Validate 'max_output_tokens' variable\n  if (!requestData.maxOutputTokens) {\n    return errorTrace(`Missing variable - max_output_tokens`, inputVars);\n  }\n  // Validate 'model' variable\n  if (!requestData.model) {\n    return errorTrace(`Missing variable - model`, inputVars);\n  }\n  // Validate 'prompt' variable\n  if (!requestData.prompt) {\n    return errorTrace(`Missing variable - prompt`, inputVars);\n  }\n\n  // Set request URL\n  const requestUrl = 'https://api.openai.com/v1/responses';\n\n  // Prepare request body\n  // The 'detail' parameter tells the model what level of detail\n  // to use when processing and understanding the image (low, high, or auto)\n  const requestBody = {\n    model: requestData.model,\n    input: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'input_text',\n            text: requestData.prompt,\n          },\n          {\n            type: 'input_image',\n            image_url: requestData.imageUrl,\n            detail: 'auto',\n          },\n        ],\n      },\n    ],\n    max_output_tokens: Number(requestData.maxOutputTokens),\n  };\n\n  // Prepare request configuration\n  const requestConfig = {\n    method: 'POST',\n    headers: {\n      Authorization: `Bearer ${requestData.apiKey}`,\n      'Content-Type': 'application/json',\n      Accept: 'application/json',\n    },\n    body: JSON.stringify(requestBody),\n  };\n\n  try {\n    // Make the API call\n    const response = await fetch(requestUrl, requestConfig);\n\n    // Extract the JSON body from the response\n    const responseBody = response.json;\n\n    // Check if the response status is OK\n    if (!response.ok) {\n      return errorTrace(\n        `HTTP status code ${response.status} returned from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the responseBody structure as expected\n    if (!responseBody || typeof responseBody !== 'object') {\n      return errorTrace(\n        `Invalid or missing response body from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the length of the responseBody as expected\n    if (!responseBody?.output?.length) {\n      return errorTrace(\n        'No response returned from the API',\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Extract completion from the response\n    const outputText = responseBody.output[0].content[0].text;\n    const outputUsage = JSON.stringify(responseBody.usage, null, 2);\n\n    return {\n      outputVars: {\n        output_text: outputText,\n        output_usage: outputUsage,\n      },\n      next: {\n        path: 'success',\n      },\n      trace: [\n        {\n          type: 'debug',\n          payload: {\n            message: 'Open AI Responses API function with success',\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Output: ${outputText}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Usage ${outputUsage}`,\n          },\n        },\n      ],\n    };\n  } catch (error) {\n    return errorTrace(error.message ?? 'Unknown', error, requestBody);\n  }\n\n  function errorTrace(message, context = {}, payload = {}) {\n    return {\n      next: {\n        path: 'error',\n      },\n      trace: [\n        {\n          type: 'debug',\n          payload: {\n            message: 'Open AI Responses API function with error',\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Error: ${message}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Context: ${JSON.stringify(context)}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Payload: ${JSON.stringify(payload)}`,\n          },\n        },\n      ],\n    };\n  }\n}",
+      "image": "https://cm4-production-assets.s3.amazonaws.com/1726599978080-openai-logomark.png",
+      "description": "Perform Vision AI with the OpenAI Responses API by passing an image URL and a prompt",
+      "pathOrder": [
+        "67dfb911a6193729493ff98e",
+        "67dfb911a6193729493ff98f"
+      ],
+      "createdAt": "2025-03-23T07:32:34.000Z",
+      "updatedAt": "2025-03-23T21:14:56.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67dfdd33924a57df45cb1321",
+      "name": "Anthropic: Vision with Claude",
+      "createdByID": 885906,
+      "folderID": null,
+      "code": "export default async function main(args) {\n  /**\n   * Function developed by Juan Carlos Quintero (https://moonside.ai)\n   *\n   * Function to perform Vision AI on images using the Claude Messages API from Anthropic\n   *\n   * Guide: https://docs.anthropic.com/en/docs/initial-setup\n   * Claude Models: https://docs.anthropic.com/en/docs/about-claude/models/all-models\n   * API Reference: https://docs.anthropic.com/en/api/messages\n   */\n  const { image_url, prompt, max_tokens, model, api_key } = args.inputVars;\n\n  // Prepare request data\n  const requestData = {\n    apiKey: api_key.trim(),\n    imageUrl: image_url.trim(),\n    maxTokens: max_tokens.trim(),\n    model: model.trim(),\n    prompt: prompt.trim(),\n  };\n\n  // Validate 'api_key' variable\n  if (!requestData.apiKey) {\n    return errorTrace('Missing variable - api_key', inputVars);\n  }\n  // Validate 'image_url' variable\n  if (!requestData.imageUrl) {\n    return errorTrace(`Missing variable - image_url`, inputVars);\n  }\n  // Validate 'max_output_tokens' variable\n  if (!requestData.maxTokens) {\n    return errorTrace(`Missing variable - max_output_tokens`, inputVars);\n  }\n  // Validate 'model' variable\n  if (!requestData.model) {\n    return errorTrace(`Missing variable - model`, inputVars);\n  }\n  // Validate 'prompt' variable\n  if (!requestData.prompt) {\n    return errorTrace(`Missing variable - prompt`, inputVars);\n  }\n\n  // Define the URL for the completion API (messages)\n  const requestUrl = 'https://api.anthropic.com/v1/messages';\n\n  // Configure the request payload\n  const requestBody = {\n    model: requestData.model,\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'image',\n            source: {\n              type: 'url',\n              url: requestData.imageUrl,\n            },\n          },\n          { type: 'text', text: requestData.prompt },\n        ],\n      },\n    ],\n    max_tokens: Number(requestData.maxTokens),\n  };\n\n  // Configure the fetch request\n  const requestConfig = {\n    method: 'POST',\n    headers: {\n      'x-api-key': requestData.apiKey,\n      'anthropic-version': '2023-06-01',\n      accept: 'application/json',\n      'content-type': 'application/json',\n    },\n    body: JSON.stringify(requestBody),\n  };\n  try {\n    // Make the API call\n    const response = await fetch(requestUrl, requestConfig);\n\n    // Extract the JSON body from the response\n    const responseBody = await response.json;\n\n    // Check if the response status is OK\n    if (!response.ok) {\n      return errorTrace(\n        `HTTP status code ${response.status} returned from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the responseBody structure as expected\n    if (!responseBody || typeof responseBody !== 'object') {\n      return errorTrace(\n        `Invalid or missing response body from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the length of the responseBody as expected\n    if (!responseBody.content?.length) {\n      return errorTrace(\n        'No response returned from the API',\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Extract completion from the response\n    const outputModel = responseBody.model;\n    const outputText = responseBody.content[0].text;\n    const outputUsage = JSON.stringify(responseBody.usage, null, 2);\n\n    return {\n      outputVars: {\n        output_model: outputModel,\n        output_text: outputText,\n        output_usage: outputUsage,\n      },\n      next: { path: 'success' },\n      trace: [\n        {\n          type: 'debug',\n          payload: { message: 'Anthropic Messages API function with success' },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Output: ${outputText}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Usage ${outputUsage}`,\n          },\n        },\n      ],\n    };\n  } catch (error) {\n    return errorTrace(error.message ?? 'Unknown', error, requestBody);\n  }\n\n  function errorTrace(message, context = {}, payload = {}) {\n    return {\n      next: {\n        path: 'error',\n      },\n      trace: [\n        {\n          type: 'debug',\n          payload: {\n            message: 'Anthropic Messages API function with error',\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Error: ${message}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Context: ${JSON.stringify(context)}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Payload: ${JSON.stringify(payload)}`,\n          },\n        },\n      ],\n    };\n  }\n}",
+      "image": "https://cm4-production-assets.s3.amazonaws.com/1741091354835-anthropic-logo.jpeg",
+      "description": "Perform Vision AI with the Anthropic Claude API by passing an image URL and a prompt",
+      "pathOrder": [
+        "67dfdd33924a57df45cb1322",
+        "67dfdd33924a57df45cb1323"
+      ],
+      "createdAt": "2025-03-23T10:06:44.000Z",
+      "updatedAt": "2025-03-23T12:07:38.000Z",
+      "updatedByID": 885906
+    },
+    {
+      "id": "67e01047a6193729494021c0",
+      "name": "Supabase: Create Payload",
+      "createdByID": 885906,
+      "folderID": null,
+      "code": "export default async function main(args) {\n  const { id, key, bucket } = args.inputVars;\n  \n  return {\n    outputVars: { \n      payload: JSON.stringify({ id, key, bucket }),\n    },\n    next: { path: 'default' },\n    trace: [{\n      type: 'debug',\n      payload: {\n        message: 'Supabase payload created',\n      }\n    }]\n  };\n}",
+      "image": "https://cm4-production-assets.s3.amazonaws.com/1742737526867-supabase-logo-dark.png",
+      "description": "Simple function to create the payload for the upload extension",
+      "pathOrder": [
+        "67e0110ea61937294940222b"
+      ],
+      "createdAt": "2025-03-23T13:44:39.000Z",
+      "updatedAt": "2025-03-25T21:40:53.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "functionPaths": [
+    {
+      "id": "67dfb911a6193729493ff98e",
+      "name": "success",
+      "label": "Success",
+      "functionID": "67dfb911a6193729493ff98d",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff98f",
+      "name": "error",
+      "label": "Error",
+      "functionID": "67dfb911a6193729493ff98d",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67e0110ea61937294940222b",
+      "name": "default",
+      "label": "",
+      "functionID": "67e01047a6193729494021c0",
+      "createdAt": "2025-03-23T13:47:58.598Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1322",
+      "name": "error",
+      "label": "Error",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "createdAt": "2025-03-23T10:06:43.947Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1323",
+      "name": "success",
+      "label": "Success",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "createdAt": "2025-03-23T10:06:43.948Z"
+    }
+  ],
+  "functionVariables": [
+    {
+      "id": "67dfb911a6193729493ff991",
+      "name": "api_key",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "The OpenAI API Key",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff992",
+      "name": "output_text",
+      "type": "output",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "This is the response from the OpenAI Responses API",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff994",
+      "name": "model",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "The model to use (gpt-4o, gpt-4o-mini, etc)",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff995",
+      "name": "prompt",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "What you want to ask the Vision API (i.e: What is in this image?)",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff993",
+      "name": "max_output_tokens",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "An upper bound for the number of tokens that can be generated for a response, including visible output tokens and reasoning tokens.",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfc7c0a6193729493ffd20",
+      "name": "output_usage",
+      "type": "output",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "JSON with token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used.",
+      "createdAt": "2025-03-23T08:35:12.329Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1329",
+      "name": "api_key",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "API Key from Anthropic Console",
+      "createdAt": "2025-03-23T10:06:43.947Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1328",
+      "name": "model",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The model to use",
+      "createdAt": "2025-03-23T10:06:43.950Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1327",
+      "name": "max_tokens",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "Maximum number of tokens to use",
+      "createdAt": "2025-03-23T10:06:43.951Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1325",
+      "name": "prompt",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The user prompt",
+      "createdAt": "2025-03-23T10:06:43.952Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1326",
+      "name": "output_text",
+      "type": "output",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The text output received from the API",
+      "createdAt": "2025-03-23T10:06:43.953Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb132c",
+      "name": "output_usage",
+      "type": "output",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The token usage consumed for the completion",
+      "createdAt": "2025-03-23T10:06:43.954Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb132d",
+      "name": "output_model",
+      "type": "output",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The model used for the completion",
+      "createdAt": "2025-03-23T10:06:43.955Z"
+    },
+    {
+      "id": "67dfe881a619372949400c7f",
+      "name": "image_url",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The URL of the image",
+      "createdAt": "2025-03-23T10:54:57.581Z"
+    },
+    {
+      "id": "67e01152a61937294940227a",
+      "name": "payload",
+      "type": "output",
+      "functionID": "67e01047a6193729494021c0",
+      "description": "",
+      "createdAt": "2025-03-23T13:49:06.392Z"
+    },
+    {
+      "id": "67e01154a61937294940227c",
+      "name": "id",
+      "type": "input",
+      "functionID": "67e01047a6193729494021c0",
+      "description": "ID of Supabase project",
+      "createdAt": "2025-03-23T13:49:08.877Z"
+    },
+    {
+      "id": "67e01163a619372949402289",
+      "name": "key",
+      "type": "input",
+      "functionID": "67e01047a6193729494021c0",
+      "description": "Anon key of Supabase project",
+      "createdAt": "2025-03-23T13:49:23.210Z"
+    },
+    {
+      "id": "67e018c5a6193729494026f5",
+      "name": "bucket",
+      "type": "input",
+      "functionID": "67e01047a6193729494021c0",
+      "description": "Supabase bucket",
+      "createdAt": "2025-03-23T14:20:53.855Z"
+    },
+    {
+      "id": "67e021dfa619372949402aa4",
+      "name": "image_url",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "The URL to the image (png, jpeg, webp, gif)",
+      "createdAt": "2025-03-23T14:59:43.163Z"
+    }
+  ],
+  "project": {
+    "type": "chat",
+    "name": "Vision Agent",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1742939259086-logomark-cyan.png",
+    "teamID": "wJEoD4yekq",
+    "members": [],
+    "platform": "webchat",
+    "_version": 1.2,
+    "linkType": "STRAIGHT",
+    "creatorID": 969814,
+    "updatedBy": 885906,
+    "platformData": {
+      "invocationName": "template project general"
+    },
+    "customThemes": [
+      {
+        "name": "AI",
+        "palette": {
+          "50": "#f3ebf6",
+          "100": "#ebdef1",
+          "200": "#e2ceea",
+          "300": "#d8bde3",
+          "400": "#caa3d9",
+          "500": "#bc88ce",
+          "600": "#ac6ac1",
+          "700": "#8a529b",
+          "800": "#653b72",
+          "900": "#3f2348"
+        },
+        "standardColor": "#bc88ce"
+      },
+      {
+        "name": "API",
+        "palette": {
+          "50": "#ccf7ed",
+          "100": "#a5f1e1",
+          "200": "#9be2d3",
+          "300": "#90d3c5",
+          "400": "#80bcb0",
+          "500": "#70a59a",
+          "600": "#5f8c83",
+          "700": "#4a6f67",
+          "800": "#35514b",
+          "900": "#1f322e"
+        },
+        "standardColor": "#70a59a"
+      }
+    ],
+    "aiAssistSettings": {
+      "aiPlayground": true
+    },
+    "apiPrivacy": "public",
+    "_id": "67dbd2d068173bf6822583b8",
+    "updatedAt": "2025-03-25T21:47:39.637Z",
+    "devVersion": "67dbd2d068173bf6822583b9",
+    "liveVersion": "67dbd2d068173bf6822583ba"
+  },
+  "_version": "1.2",
+  "secrets": [
+    {
+      "assistantID": "67dbd2d068173bf6822583b8",
+      "id": "67dbd31d68173bf6822583de",
+      "updatedByID": null,
+      "name": "OPENAI_KEY",
+      "visibility": "masked",
+      "updatedAt": "2025-03-20T08:34:38.000Z",
+      "createdAt": "2025-03-20T08:34:38.000Z"
+    },
+    {
+      "assistantID": "67dbd2d068173bf6822583b8",
+      "id": "67dfe95ba619372949400ce8",
+      "updatedByID": null,
+      "name": "ANTHROPIC_KEY",
+      "visibility": "masked",
+      "updatedAt": "2025-03-23T10:58:36.000Z",
+      "createdAt": "2025-03-23T10:58:36.000Z"
+    },
+    {
+      "assistantID": "67dbd2d068173bf6822583b8",
+      "id": "67e00eb4a6193729494020a6",
+      "updatedByID": null,
+      "name": "SUPABASE_PROJECT_ID",
+      "visibility": "masked",
+      "updatedAt": "2025-03-23T13:37:56.000Z",
+      "createdAt": "2025-03-23T13:37:56.000Z"
+    },
+    {
+      "assistantID": "67dbd2d068173bf6822583b8",
+      "id": "67e00ec3a6193729494020a9",
+      "updatedByID": null,
+      "name": "SUPABASE_ANON_KEY",
+      "visibility": "masked",
+      "updatedAt": "2025-03-23T13:38:12.000Z",
+      "createdAt": "2025-03-23T13:38:12.000Z"
+    }
+  ],
+  "variableStates": []
+}
