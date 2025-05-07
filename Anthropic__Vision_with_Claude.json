@@ -1,0 +1,102 @@
+{
+  "functions": [
+    {
+      "id": "67dfdd33924a57df45cb1321",
+      "name": "Anthropic: Vision with Claude",
+      "createdByID": 885906,
+      "folderID": null,
+      "code": "export default async function main(args) {\n  /**\n   * Function developed by Juan Carlos Quintero (https://moonside.ai)\n   *\n   * Function to perform Vision AI on images using the Claude Messages API from Anthropic\n   *\n   * Guide: https://docs.anthropic.com/en/docs/initial-setup\n   * Claude Models: https://docs.anthropic.com/en/docs/about-claude/models/all-models\n   * API Reference: https://docs.anthropic.com/en/api/messages\n   */\n  const { image_url, prompt, max_tokens, model, api_key } = args.inputVars;\n\n  // Prepare request data\n  const requestData = {\n    apiKey: api_key.trim(),\n    imageUrl: image_url.trim(),\n    maxTokens: max_tokens.trim(),\n    model: model.trim(),\n    prompt: prompt.trim(),\n  };\n\n  // Validate 'api_key' variable\n  if (!requestData.apiKey) {\n    return errorTrace('Missing variable - api_key', inputVars);\n  }\n  // Validate 'image_url' variable\n  if (!requestData.imageUrl) {\n    return errorTrace(`Missing variable - image_url`, inputVars);\n  }\n  // Validate 'max_output_tokens' variable\n  if (!requestData.maxTokens) {\n    return errorTrace(`Missing variable - max_output_tokens`, inputVars);\n  }\n  // Validate 'model' variable\n  if (!requestData.model) {\n    return errorTrace(`Missing variable - model`, inputVars);\n  }\n  // Validate 'prompt' variable\n  if (!requestData.prompt) {\n    return errorTrace(`Missing variable - prompt`, inputVars);\n  }\n\n  // Define the URL for the completion API (messages)\n  const requestUrl = 'https://api.anthropic.com/v1/messages';\n\n  // Configure the request payload\n  const requestBody = {\n    model: requestData.model,\n    messages: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'image',\n            source: {\n              type: 'url',\n              url: requestData.imageUrl,\n            },\n          },\n          { type: 'text', text: requestData.prompt },\n        ],\n      },\n    ],\n    max_tokens: Number(requestData.maxTokens),\n  };\n\n  // Configure the fetch request\n  const requestConfig = {\n    method: 'POST',\n    headers: {\n      'x-api-key': requestData.apiKey,\n      'anthropic-version': '2023-06-01',\n      accept: 'application/json',\n      'content-type': 'application/json',\n    },\n    body: JSON.stringify(requestBody),\n  };\n  try {\n    // Make the API call\n    const response = await fetch(requestUrl, requestConfig);\n\n    // Extract the JSON body from the response\n    const responseBody = await response.json;\n\n    // Check if the response status is OK\n    if (!response.ok) {\n      return errorTrace(\n        `HTTP status code ${response.status} returned from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the responseBody structure as expected\n    if (!responseBody || typeof responseBody !== 'object') {\n      return errorTrace(\n        `Invalid or missing response body from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the length of the responseBody as expected\n    if (!responseBody.content?.length) {\n      return errorTrace(\n        'No response returned from the API',\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Extract completion from the response\n    const outputModel = responseBody.model;\n    const outputText = responseBody.content[0].text;\n    const outputUsage = JSON.stringify(responseBody.usage, null, 2);\n\n    return {\n      outputVars: {\n        output_model: outputModel,\n        output_text: outputText,\n        output_usage: outputUsage,\n      },\n      next: { path: 'success' },\n      trace: [\n        {\n          type: 'debug',\n          payload: { message: 'Anthropic Messages API function with success' },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Output: ${outputText}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Usage ${outputUsage}`,\n          },\n        },\n      ],\n    };\n  } catch (error) {\n    return errorTrace(error.message ?? 'Unknown', error, requestBody);\n  }\n\n  function errorTrace(message, context = {}, payload = {}) {\n    return {\n      next: {\n        path: 'error',\n      },\n      trace: [\n        {\n          type: 'debug',\n          payload: {\n            message: 'Anthropic Messages API function with error',\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Error: ${message}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Context: ${JSON.stringify(context)}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Payload: ${JSON.stringify(payload)}`,\n          },\n        },\n      ],\n    };\n  }\n}",
+      "image": "https://cm4-production-assets.s3.amazonaws.com/1741091354835-anthropic-logo.jpeg",
+      "description": "Perform Vision AI with the Anthropic Claude API by passing an image URL and a prompt",
+      "pathOrder": [
+        "67dfdd33924a57df45cb1322",
+        "67dfdd33924a57df45cb1323"
+      ],
+      "createdAt": "2025-03-23T10:06:44.000Z",
+      "updatedAt": "2025-03-23T12:07:38.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "functionPaths": [
+    {
+      "id": "67dfdd33924a57df45cb1322",
+      "name": "error",
+      "label": "Error",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "createdAt": "2025-03-23T10:06:43.947Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1323",
+      "name": "success",
+      "label": "Success",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "createdAt": "2025-03-23T10:06:43.948Z"
+    }
+  ],
+  "functionVariables": [
+    {
+      "id": "67dfdd33924a57df45cb1329",
+      "name": "api_key",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "API Key from Anthropic Console",
+      "createdAt": "2025-03-23T10:06:43.947Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1328",
+      "name": "model",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The model to use",
+      "createdAt": "2025-03-23T10:06:43.950Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1327",
+      "name": "max_tokens",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "Maximum number of tokens to use",
+      "createdAt": "2025-03-23T10:06:43.951Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1325",
+      "name": "prompt",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The user prompt",
+      "createdAt": "2025-03-23T10:06:43.952Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1326",
+      "name": "output_text",
+      "type": "output",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The text output received from the API",
+      "createdAt": "2025-03-23T10:06:43.953Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb132c",
+      "name": "output_usage",
+      "type": "output",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The token usage consumed for the completion",
+      "createdAt": "2025-03-23T10:06:43.954Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb132d",
+      "name": "output_model",
+      "type": "output",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The model used for the completion",
+      "createdAt": "2025-03-23T10:06:43.955Z"
+    },
+    {
+      "id": "67dfe881a619372949400c7f",
+      "name": "image_url",
+      "type": "input",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "description": "The URL of the image",
+      "createdAt": "2025-03-23T10:54:57.581Z"
+    }
+  ]
+}

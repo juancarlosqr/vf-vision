@@ -1,0 +1,94 @@
+{
+  "functions": [
+    {
+      "id": "67dfb911a6193729493ff98d",
+      "name": "OpenAI: Vision with Responses",
+      "createdByID": 885906,
+      "folderID": null,
+      "code": "export default async function main({ inputVars }) {\n  /**\n   * Function developed by Juan Carlos Quintero (https://moonside.ai)\n   *\n   * Function to perform Vision AI on images or files (PDF) using the Responses API from OpenAI\n   *\n   * Guide: https://platform.openai.com/docs/guides/images?api-mode=responses\n   * API Reference: https://platform.openai.com/docs/api-reference/responses/create\n   */\n\n  // Extract input variables\n  const { image_url, prompt, model, max_output_tokens, api_key } = inputVars;\n\n  // Prepare request data\n  const requestData = {\n    apiKey: api_key.trim(),\n    imageUrl: image_url.trim(),\n    maxOutputTokens: max_output_tokens.trim(),\n    model: model.trim(),\n    prompt: prompt.trim(),\n  };\n\n  // Validate 'api_key' variable\n  if (!requestData.apiKey) {\n    return errorTrace('Missing variable - api_key', inputVars);\n  }\n  // Validate 'image_url' variable\n  if (!requestData.imageUrl) {\n    return errorTrace(`Missing variable - image_url`, inputVars);\n  }\n  // Validate 'max_output_tokens' variable\n  if (!requestData.maxOutputTokens) {\n    return errorTrace(`Missing variable - max_output_tokens`, inputVars);\n  }\n  // Validate 'model' variable\n  if (!requestData.model) {\n    return errorTrace(`Missing variable - model`, inputVars);\n  }\n  // Validate 'prompt' variable\n  if (!requestData.prompt) {\n    return errorTrace(`Missing variable - prompt`, inputVars);\n  }\n\n  // Set request URL\n  const requestUrl = 'https://api.openai.com/v1/responses';\n\n  // Prepare request body\n  // The 'detail' parameter tells the model what level of detail\n  // to use when processing and understanding the image (low, high, or auto)\n  const requestBody = {\n    model: requestData.model,\n    input: [\n      {\n        role: 'user',\n        content: [\n          {\n            type: 'input_text',\n            text: requestData.prompt,\n          },\n          {\n            type: 'input_image',\n            image_url: requestData.imageUrl,\n            detail: 'auto',\n          },\n        ],\n      },\n    ],\n    max_output_tokens: Number(requestData.maxOutputTokens),\n  };\n\n  // Prepare request configuration\n  const requestConfig = {\n    method: 'POST',\n    headers: {\n      Authorization: `Bearer ${requestData.apiKey}`,\n      'Content-Type': 'application/json',\n      Accept: 'application/json',\n    },\n    body: JSON.stringify(requestBody),\n  };\n\n  try {\n    // Make the API call\n    const response = await fetch(requestUrl, requestConfig);\n\n    // Extract the JSON body from the response\n    const responseBody = response.json;\n\n    // Check if the response status is OK\n    if (!response.ok) {\n      return errorTrace(\n        `HTTP status code ${response.status} returned from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the responseBody structure as expected\n    if (!responseBody || typeof responseBody !== 'object') {\n      return errorTrace(\n        `Invalid or missing response body from the API`,\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Validate the length of the responseBody as expected\n    if (!responseBody?.output?.length) {\n      return errorTrace(\n        'No response returned from the API',\n        responseBody,\n        requestBody\n      );\n    }\n\n    // Extract completion from the response\n    const outputText = responseBody.output[0].content[0].text;\n    const outputUsage = JSON.stringify(responseBody.usage, null, 2);\n\n    return {\n      outputVars: {\n        output_text: outputText,\n        output_usage: outputUsage,\n      },\n      next: {\n        path: 'success',\n      },\n      trace: [\n        {\n          type: 'debug',\n          payload: {\n            message: 'Open AI Responses API function with success',\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Output: ${outputText}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Usage ${outputUsage}`,\n          },\n        },\n      ],\n    };\n  } catch (error) {\n    return errorTrace(error.message ?? 'Unknown', error, requestBody);\n  }\n\n  function errorTrace(message, context = {}, payload = {}) {\n    return {\n      next: {\n        path: 'error',\n      },\n      trace: [\n        {\n          type: 'debug',\n          payload: {\n            message: 'Open AI Responses API function with error',\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Error: ${message}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Context: ${JSON.stringify(context)}`,\n          },\n        },\n        {\n          type: 'debug',\n          payload: {\n            message: `Payload: ${JSON.stringify(payload)}`,\n          },\n        },\n      ],\n    };\n  }\n}",
+      "image": "https://cm4-production-assets.s3.amazonaws.com/1726599978080-openai-logomark.png",
+      "description": "Perform Vision AI with the OpenAI Responses API by passing an image URL and a prompt",
+      "pathOrder": [
+        "67dfb911a6193729493ff98e",
+        "67dfb911a6193729493ff98f"
+      ],
+      "createdAt": "2025-03-23T07:32:34.000Z",
+      "updatedAt": "2025-03-23T21:14:56.000Z",
+      "updatedByID": 885906
+    }
+  ],
+  "functionPaths": [
+    {
+      "id": "67dfb911a6193729493ff98e",
+      "name": "success",
+      "label": "Success",
+      "functionID": "67dfb911a6193729493ff98d",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff98f",
+      "name": "error",
+      "label": "Error",
+      "functionID": "67dfb911a6193729493ff98d",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    }
+  ],
+  "functionVariables": [
+    {
+      "id": "67dfb911a6193729493ff991",
+      "name": "api_key",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "The OpenAI API Key",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff992",
+      "name": "output_text",
+      "type": "output",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "This is the response from the OpenAI Responses API",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff994",
+      "name": "model",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "The model to use (gpt-4o, gpt-4o-mini, etc)",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff995",
+      "name": "prompt",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "What you want to ask the Vision API (i.e: What is in this image?)",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfb911a6193729493ff993",
+      "name": "max_output_tokens",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "An upper bound for the number of tokens that can be generated for a response, including visible output tokens and reasoning tokens.",
+      "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfc7c0a6193729493ffd20",
+      "name": "output_usage",
+      "type": "output",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "JSON with token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used.",
+      "createdAt": "2025-03-23T08:35:12.329Z"
+    },
+    {
+      "id": "67e021dfa619372949402aa4",
+      "name": "image_url",
+      "type": "input",
+      "functionID": "67dfb911a6193729493ff98d",
+      "description": "The URL to the image (png, jpeg, webp, gif)",
+      "createdAt": "2025-03-23T14:59:43.163Z"
+    }
+  ]
+}
