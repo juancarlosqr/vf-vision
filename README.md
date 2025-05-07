@@ -2,6 +2,10 @@
 
 Add vision capabilities to your Voiceflow agent with OpenAI and Anthropic
 
+### Flow
+
+![Flow](./voiceflow-vision-ai.png)
+
 ### How To
 
 **Supabase Uploads**

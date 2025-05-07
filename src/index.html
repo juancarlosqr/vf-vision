@@ -12,7 +12,7 @@
       src="https://www.marvel.com/characters/vision"
     ></iframe>
     <script type="module">
-      import { VFImageUploadExtension } from './image_upload.ext.js';
+      import { VFImageUploadExtension } from '/image_upload.ext.js';
 
       (function (d, t) {
         var v = d.createElement(t),
@@ -22,6 +22,9 @@
             verify: { projectID: 'YOUR_VOICEFLOW_PROJECT_ID' }, // Add YOUR_VOICEFLOW_PROJECT_ID here
             url: 'https://general-runtime.voiceflow.com',
             versionID: 'production',
+            voice: {
+              url: 'https://runtime-api.voiceflow.com',
+            },
             allowDangerousHTML: true,
             assistant: {
               extensions: [VFImageUploadExtension],

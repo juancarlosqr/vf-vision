@@ -1,6 +1,6 @@
 {
   "version": {
-    "_version": 13,
+    "_version": 13.02,
     "autoSaveFromRestore": false,
     "canvasTemplates": [],
     "components": [],
@@ -158,6 +158,7 @@
           ]
         }
       },
+      "apiTools": {},
       "messages": {
         "67dd1df69a9d805ec7145b37": {
           "variants": {
@@ -534,7 +535,8 @@
             ]
           }
         }
-      }
+      },
+      "integrationTools": {}
     },
     "prototype": {
       "type": "chat",
@@ -692,6 +694,8 @@
           "67e30fd23a103c3710116dce"
         ],
         "referencedAgentsIDs": [],
+        "referencedAPIToolIDs": [],
+        "referencedIntegrationToolIDs": [],
         "slotsMap": {},
         "platform": "webchat",
         "products": {},
@@ -923,6 +927,23 @@
         "params": {
           "confidence": 0.6
         }
+      },
+      "voice": {
+        "failureMessage": "We’re sorry, but the call cannot be completed at this time. Please try again later.",
+        "hasCallRecording": false,
+        "tts": {
+          "provider": "elevenlabs",
+          "model": "eleven_turbo_v2_5",
+          "voice": "FGY2WhTYpPnrIDTdsKH5",
+          "useCustomVoice": false,
+          "settings": {
+            "speed": 1,
+            "stability": 0.5,
+            "similarity_boost": 0.75,
+            "style": 0,
+            "speaker_boost": false
+          }
+        }
       }
     },
     "topics": [
@@ -956,7 +977,7 @@
       "openai_response"
     ],
     "_id": "67dbd2d068173bf6822583b9",
-    "updatedAt": "2025-03-25T21:47:01.519Z",
+    "updatedAt": "2025-05-07T09:25:21.616Z",
     "publishedAt": "2024-09-22T02:26:55.448Z",
     "domains": [
       {
@@ -1680,7 +1701,7 @@
                 "value": [
                   {
                     "text": [
-                      "gpt-4o"
+                      "gpt-4.1-mini"
                     ]
                   }
                 ],
@@ -2328,184 +2349,6 @@
             }
           },
           "nodeID": "67e30fd0ba11d771c5814d11"
-        },
-        "67e32313a58536bbb2ebe787": {
-          "type": "markup_text",
-          "data": {
-            "scale": 1,
-            "rotate": 0,
-            "content": [
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": "Vision AI with OpenAI and Anthropic models"
-                  }
-                ]
-              },
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              },
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": "Template built by "
-                  },
-                  {
-                    "text": "Juan Carlos Quintero",
-                    "fontWeight": "700"
-                  }
-                ]
-              },
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": ""
-                  }
-                ]
-              },
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": "",
-                    "color": {
-                      "r": 0,
-                      "g": 0,
-                      "b": 0,
-                      "a": 1
-                    }
-                  },
-                  {
-                    "url": "https://moonside.ai/",
-                    "type": "link",
-                    "children": [
-                      {
-                        "text": "Moonside AI",
-                        "color": {
-                          "r": 0,
-                          "g": 0,
-                          "b": 0,
-                          "a": 1
-                        },
-                        "underline": true
-                      }
-                    ]
-                  },
-                  {
-                    "text": "",
-                    "color": {
-                      "r": 0,
-                      "g": 0,
-                      "b": 0,
-                      "a": 1
-                    }
-                  }
-                ]
-              },
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": "",
-                    "color": {
-                      "r": 0,
-                      "g": 0,
-                      "b": 0,
-                      "a": 1
-                    }
-                  },
-                  {
-                    "url": "https://www.voiceflow.com/contributors/juan-carlos-quintero",
-                    "type": "link",
-                    "children": [
-                      {
-                        "text": "Voiceflow Expert Page",
-                        "color": {
-                          "r": 0,
-                          "g": 0,
-                          "b": 0,
-                          "a": 1
-                        },
-                        "underline": true
-                      }
-                    ]
-                  },
-                  {
-                    "text": "",
-                    "color": {
-                      "r": 0,
-                      "g": 0,
-                      "b": 0,
-                      "a": 1
-                    }
-                  }
-                ]
-              },
-              {
-                "textAlign": "left",
-                "children": [
-                  {
-                    "text": ""
-                  },
-                  {
-                    "url": "https://github.com/juancarlosqr/vf-vision",
-                    "type": "link",
-                    "children": [
-                      {
-                        "color": {
-                          "r": 0,
-                          "g": 0,
-                          "b": 0,
-                          "a": 1
-                        },
-                        "text": "Get Extension",
-                        "underline": true
-                      }
-                    ]
-                  },
-                  {
-                    "text": ""
-                  }
-                ]
-              }
-            ],
-            "overrideWidth": 438,
-            "backgroundColor": {
-              "r": 135,
-              "g": 234,
-              "b": 238,
-              "a": 1
-            },
-            "name": "Block"
-          },
-          "nodeID": "67e32313a58536bbb2ebe787",
-          "coords": [
-            -4052.4953546863435,
-            1593.0268818275667
-          ]
-        },
-        "67e323ada58536bbb2ebe78a": {
-          "type": "markup_image",
-          "data": {
-            "url": "https://cm4-production-assets.s3.amazonaws.com/1742939053722-avatar.png",
-            "width": 215.36930197097132,
-            "height": 215.36930197097132,
-            "rotate": 0,
-            "name": "Block"
-          },
-          "nodeID": "67e323ada58536bbb2ebe78a",
-          "coords": [
-            -4155.26615548511,
-            1700.141739986546
-          ]
         }
       },
       "offsetX": 4138.732014983952,
@@ -3657,7 +3500,7 @@
       "assigneeID": 885906,
       "description": "Workflow to showcase how to do Vision AI",
       "createdAt": "2024-05-31T14:48:38.000Z",
-      "updatedAt": "2025-03-25T22:01:36.000Z",
+      "updatedAt": "2025-05-07T09:35:53.000Z",
       "updatedByID": 885906
     }
   ],
@@ -3841,9 +3684,14 @@
   ],
   "events": [],
   "agents": [],
+  "agentAPITools": [],
   "agentPathTools": [],
   "agentFunctionTools": [],
+  "agentIntegrationTools": [],
   "agentPathToolVariables": [],
+  "apiTools": [],
+  "apiToolInputVariables": [],
+  "integrationTools": [],
   "functions": [
     {
       "id": "67dfb911a6193729493ff98d",
@@ -3895,20 +3743,6 @@
   ],
   "functionPaths": [
     {
-      "id": "67dfdd33924a57df45cb1322",
-      "name": "error",
-      "label": "Error",
-      "functionID": "67dfdd33924a57df45cb1321",
-      "createdAt": "2025-03-23T10:06:43.947Z"
-    },
-    {
-      "id": "67dfdd33924a57df45cb1323",
-      "name": "success",
-      "label": "Success",
-      "functionID": "67dfdd33924a57df45cb1321",
-      "createdAt": "2025-03-23T10:06:43.948Z"
-    },
-    {
       "id": "67e0110ea61937294940222b",
       "name": "default",
       "label": "",
@@ -3928,6 +3762,20 @@
       "label": "Error",
       "functionID": "67dfb911a6193729493ff98d",
       "createdAt": "2025-03-23T07:32:33.746Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1322",
+      "name": "error",
+      "label": "Error",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "createdAt": "2025-03-23T10:06:43.947Z"
+    },
+    {
+      "id": "67dfdd33924a57df45cb1323",
+      "name": "success",
+      "label": "Success",
+      "functionID": "67dfdd33924a57df45cb1321",
+      "createdAt": "2025-03-23T10:06:43.948Z"
     }
   ],
   "functionVariables": [
@@ -4137,7 +3985,7 @@
     },
     "apiPrivacy": "public",
     "_id": "67dbd2d068173bf6822583b8",
-    "updatedAt": "2025-03-25T21:47:39.637Z",
+    "updatedAt": "2025-04-03T15:07:29.179Z",
     "devVersion": "67dbd2d068173bf6822583b9",
     "liveVersion": "67dbd2d068173bf6822583ba"
   },
