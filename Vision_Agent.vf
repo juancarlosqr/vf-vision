@@ -978,7 +978,7 @@
       "openai_response"
     ],
     "_id": "67dbd2d068173bf6822583b9",
-    "updatedAt": "2025-05-07T15:18:01.529Z",
+    "updatedAt": "2025-05-09T15:36:49.463Z",
     "publishedAt": "2024-09-22T02:26:55.448Z",
     "domains": [
       {
@@ -2192,7 +2192,7 @@
               "bucket": [
                 {
                   "text": [
-                    "vision"
+                    "assets"
                   ]
                 }
               ]
@@ -2483,8 +2483,8 @@
           },
           "nodeID": "681b78b16824b4e891565987",
           "coords": [
-            -4260.803500719947,
-            957.7233051278158
+            -4251.625923736264,
+            927.1786100744688
           ]
         },
         "681b79526824b4e89156598a": {
@@ -2498,8 +2498,8 @@
           },
           "nodeID": "681b79526824b4e89156598a",
           "coords": [
-            -4193.634618748044,
-            1065.276192910061
+            -4184.45704176436,
+            1034.7314978567135
           ]
         }
       },
@@ -3652,7 +3652,7 @@
       "assigneeID": 885906,
       "description": "Workflow to showcase how to do Vision AI",
       "createdAt": "2024-05-31T14:48:38.000Z",
-      "updatedAt": "2025-05-07T15:17:36.000Z",
+      "updatedAt": "2025-05-09T15:36:52.000Z",
       "updatedByID": 885906
     }
   ],
@@ -3909,13 +3909,6 @@
       "createdAt": "2025-03-23T07:32:33.746Z"
     },
     {
-      "id": "67e0110ea61937294940222b",
-      "name": "default",
-      "label": "",
-      "functionID": "67e01047a6193729494021c0",
-      "createdAt": "2025-03-23T13:47:58.598Z"
-    },
-    {
       "id": "67dfdd33924a57df45cb1322",
       "name": "error",
       "label": "Error",
@@ -3928,6 +3921,13 @@
       "label": "Success",
       "functionID": "67dfdd33924a57df45cb1321",
       "createdAt": "2025-03-23T10:06:43.948Z"
+    },
+    {
+      "id": "67e0110ea61937294940222b",
+      "name": "default",
+      "label": "",
+      "functionID": "67e01047a6193729494021c0",
+      "createdAt": "2025-03-23T13:47:58.598Z"
     }
   ],
   "functionVariables": [
@@ -4137,7 +4137,7 @@
     },
     "apiPrivacy": "public",
     "_id": "67dbd2d068173bf6822583b8",
-    "updatedAt": "2025-05-07T15:13:56.948Z",
+    "updatedAt": "2025-05-09T15:36:52.247Z",
     "devVersion": "67dbd2d068173bf6822583b9",
     "liveVersion": "67dbd2d068173bf6822583ba"
   },
