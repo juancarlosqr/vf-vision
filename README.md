@@ -41,9 +41,9 @@ npx serve src
 
 **Marketplace**
 
-- [Voiceflow Expert Profile](https://www.voiceflow.com/contributors/juan-carlos-quintero)
-- [OpenAI Function](https://www.voiceflow.com/)
-- [Anthropic Function](https://www.voiceflow.com/)
+- [Vision AI Template](https://www.voiceflow.com/templates/vision-ai-with-gpt-claude-and-supabase)
+- [Vision AI with OpenAI Function](https://www.voiceflow.com/templates/vision-ai-with-openai-responses-api)
+- [Vision AI with Anthropic Function](https://www.voiceflow.com/templates/vision-ai-with-anthropic-messages-api)
 
 **Video**
 
@@ -56,6 +56,7 @@ npx serve src
 
 **More**
 
+- https://www.voiceflow.com/contributors/juan-carlos-quintero
 - https://docs.voiceflow.com/docs/custom-web-chat-widgets
 - https://supabase.com/docs/guides/storage/uploads/standard-uploads
 - https://supabase.com/docs/reference/javascript/storage-from-upload
